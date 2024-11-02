@@ -11,7 +11,8 @@ namespace InfoTech.DataAccess.Data
             ChangeTracker.LazyLoadingEnabled = false;
         }
 
-        public DbSet<Email> Emails { get; set; }
-        public DbSet<Phone> Phones { get; set; }
+        public DbSet<Email>? Emails { get; set; }
+        public DbSet<Phone>? Phones { get; set; }
+        public DbSet<Language>? Languages { get; set; }
     }
 }

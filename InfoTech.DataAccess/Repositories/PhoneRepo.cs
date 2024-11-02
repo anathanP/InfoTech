@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using InfoTech.DataAccess.Repositories.IRepositories;
+﻿using InfoTech.DataAccess.Repositories.IRepositories;
 using InfoTech.Models;
 using Microsoft.EntityFrameworkCore;
 

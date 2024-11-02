@@ -4,6 +4,7 @@
     {
         IEmailRepo Emails { get; }
         IPhoneRepo Phones { get; }
+        ILanguageRepo Languages { get; }
 
 
         void Save();

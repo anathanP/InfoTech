@@ -3,13 +3,13 @@ using InfoTech.Utilities;
 
 namespace InfoTech.Models
 {
-    public class Phone
+    public class Language
     {
         [Key]
         public int Id { get; set; }
         [Required]
-        [MaxLength(13)]
-        public string? Number { get; set; }
+        [MaxLength(20)]
+        public string? Name { get; set; }
         public Sd.Status Status { get; set; }
     }
 }

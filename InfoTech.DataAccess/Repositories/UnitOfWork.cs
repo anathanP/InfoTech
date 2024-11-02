@@ -9,12 +9,14 @@ namespace InfoTech.DataAccess.Repositories
         private readonly AppDbContext _db;
         public IEmailRepo Emails { get; }
         public IPhoneRepo Phones { get; set; }
+        public ILanguageRepo Languages { get; set; }
 
         public UnitOfWork(AppDbContext db)
         {
             _db = db;
             Emails = new EmailRepo(_db);
             Phones = new PhoneRepo(_db);
+            Languages = new LanguageRepo(_db);
         }
         public void Save()
         {
