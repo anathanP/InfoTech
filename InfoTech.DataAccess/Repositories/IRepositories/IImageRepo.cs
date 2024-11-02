@@ -2,8 +2,8 @@
 
 namespace InfoTech.DataAccess.Repositories.IRepositories
 {
-    public interface ILanguageRepo : IRepository<Language>
+    public interface IImageRepo : IRepository<Image>
     {
-        void Update(Language language);
+        void Update(Image image);
     }
 }

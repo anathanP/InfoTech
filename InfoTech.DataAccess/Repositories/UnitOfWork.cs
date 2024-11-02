@@ -1,6 +1,5 @@
 ﻿using InfoTech.DataAccess.Data;
 using InfoTech.DataAccess.Repositories.IRepositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace InfoTech.DataAccess.Repositories
 {
@@ -8,8 +7,9 @@ namespace InfoTech.DataAccess.Repositories
     {
         private readonly AppDbContext _db;
         public IEmailRepo Emails { get; }
-        public IPhoneRepo Phones { get; set; }
-        public ILanguageRepo Languages { get; set; }
+        public IPhoneRepo Phones { get; }
+        public ILanguageRepo Languages { get; }
+        public IImageRepo Images { get; }
 
         public UnitOfWork(AppDbContext db)
         {
@@ -17,6 +17,7 @@ namespace InfoTech.DataAccess.Repositories
             Emails = new EmailRepo(_db);
             Phones = new PhoneRepo(_db);
             Languages = new LanguageRepo(_db);
+            Images = new ImageRepo(_db);
         }
         public void Save()
         {
