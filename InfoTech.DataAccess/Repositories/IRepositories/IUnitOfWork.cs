@@ -6,6 +6,7 @@
         IPhoneRepo Phones { get; }
         ILanguageRepo Languages { get; }
         IImageRepo Images { get; }
+        ISocialMediaRepo SocialMedias { get; }
 
 
         void Save();

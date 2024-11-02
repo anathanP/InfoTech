@@ -10,6 +10,7 @@ namespace InfoTech.DataAccess.Repositories
         public IPhoneRepo Phones { get; }
         public ILanguageRepo Languages { get; }
         public IImageRepo Images { get; }
+        public ISocialMediaRepo SocialMedias { get; }
 
         public UnitOfWork(AppDbContext db)
         {
@@ -18,6 +19,7 @@ namespace InfoTech.DataAccess.Repositories
             Phones = new PhoneRepo(_db);
             Languages = new LanguageRepo(_db);
             Images = new ImageRepo(_db);
+            SocialMedias = new SocialMediaRepo(_db);
         }
         public void Save()
         {

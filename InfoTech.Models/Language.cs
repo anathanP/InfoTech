@@ -11,5 +11,7 @@ namespace InfoTech.Models
         [MaxLength(20)]
         public string? Name { get; set; }
         public Sd.Status Status { get; set; }
+        public Image? Image { get; set; }
+        public int ImageId { get; set; }
     }
 }

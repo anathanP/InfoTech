@@ -16,5 +16,7 @@ namespace InfoTech.Models
         [MaxLength(30)]
         public string? Title { get; set; }
 
+        public Language? Language { get; set; }
+
     }
 }
