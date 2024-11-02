@@ -6,4 +6,19 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Customer\Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InfoTech.DataAccess\InfoTech.DataAccess.csproj" />
+    <ProjectReference Include="..\InfoTech.Models\InfoTech.Models.csproj" />
+    <ProjectReference Include="..\InfoTech.Utilities\InfoTech.Utilities.csproj" />
+  </ItemGroup>
+
 </Project>
