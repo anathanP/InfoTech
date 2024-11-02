@@ -571,51 +571,6 @@ Js TABLE OF CONTENTS
             e.stopPropagation();
         });
 
-        //>> Mouse Cursor Start <<//
-        function mousecursor() {
-            if ($("body")) {
-                const e = document.querySelector(".cursor-inner"),
-                      t = document.querySelector(".cursor-outer");
-                let n,
-                    i = 0,
-                    o = !1;
-                
-                const isRTL = getComputedStyle(document.body).direction === 'rtl';
-        
-                window.onmousemove = function(s) {
-                    const x = isRTL ? document.body.clientWidth - s.clientX : s.clientX;
-                    const y = s.clientY;
-        
-                    if (!o) {
-                        t.style.transform = `translate(-${x}px, ${y}px)`;
-                    }
-                    e.style.transform = `translate(-${x}px, ${y}px)`;
-        
-                    n = y;
-                    i = x;
-                };
-        
-                $("body").on("mouseenter", "a, .cursor-pointer", function() {
-                    e.classList.add("cursor-hover");
-                    t.classList.add("cursor-hover");
-                });
-        
-                $("body").on("mouseleave", "a, .cursor-pointer", function() {
-                    if (!($(this).is("a") && $(this).closest(".cursor-pointer").length)) {
-                        e.classList.remove("cursor-hover");
-                        t.classList.remove("cursor-hover");
-                    }
-                });
-        
-                e.style.visibility = "visible";
-                t.style.visibility = "visible";
-            }
-        }
-        
-        $(function() {
-            mousecursor();
-        });
-        
 
     }); // End Document Ready Function
 
