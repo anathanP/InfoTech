@@ -3,6 +3,7 @@
     public interface IUnitOfWork
     {
         IEmailRepo Emails { get; }
+        IPhoneRepo Phones { get; }
 
 
         void Save();

@@ -12,5 +12,6 @@ namespace InfoTech.DataAccess.Data
         }
 
         public DbSet<Email> Emails { get; set; }
+        public DbSet<Phone> Phones { get; set; }
     }
 }

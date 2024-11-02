@@ -1,6 +1,8 @@
 ﻿using InfoTech.DataAccess.Repositories.IRepositories;
 using InfoTech.Models;
+using InfoTech.Utilities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.Json;
 
 namespace InfoTech.DataAccess.Repositories
 {
@@ -16,5 +18,6 @@ namespace InfoTech.DataAccess.Repositories
         {
             _dbSet.Update(email);
         }
+
     }
 }
