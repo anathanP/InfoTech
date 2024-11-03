@@ -1,72 +1,7 @@
 ﻿@model TopHeaderViewModel
 
 <header>
-    <div class="header-top-section top-style-3">
-        <div class="container">
-            <div class="header-top-wrapper">
-                <ul class="contact-list">
-                    <li>
-                        <i class="far fa-envelope">
-                        </i>
-                        <a class="link" href="mailto:@Model.Email.Address">
-                            @Model.Email.Address
-                        </a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-phone-volume">
-                        </i>
-                        <a href="tel:@Model.Phone.Number">
-                            @Model.Phone.Number
-                        </a>
-                    </li>
-                </ul>
-                <div class="top-left">
-                    <div class="flag-wrap">
-                        <div class="flag">
-                            <img alt="flag" src="/img/flag.png" />
-                        </div>
-                        <div class="nice-select" tabindex="0">
-                            <span class="current">
-                                انگلیسی
-                            </span>
-                            <ul class="list">
-                                <li class="option selected focus" data-value="1">
-                                    انگلیسی
-                                </li>
-                                <li class="option" data-value="1">
-                                    بنگلا
-                                </li>
-                                <li class="option" data-value="1">
-                                    هندی
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="social-icon d-flex align-items-center">
-                        <span>
-                            ما را دنبال کنید:
-                        </span>
-                        <a href="#">
-                            <i class="fab fa-facebook-f">
-                            </i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-twitter">
-                            </i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-linkedin-in">
-                            </i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-youtube">
-                            </i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <partial name="_TopHeader" model="Model"/>
     <div class="header-3" id="header-sticky">
         <div class="plane-shape">
             <img alt="shape-img" src="/img/plane.png" />

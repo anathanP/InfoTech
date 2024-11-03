@@ -1,6 +1,6 @@
-﻿using System.Security.Principal;
+﻿using InfoTech.Models;
 
-namespace InfoTech.Models.ViewModels
+namespace InfoTech.DataAccess.ViewModels
 {
     public class TopHeaderViewModel
     {

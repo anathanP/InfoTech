@@ -1,0 +1,68 @@
+﻿@model TopHeaderViewModel
+@{
+    var langId = int.Parse(Context.Request.Cookies["SetLanguage"]!);
+}
+<div class="header-top-section top-style-3">
+    <div class="container">
+        <div class="header-top-wrapper">
+            <ul class="contact-list">
+                <li>
+                    <i class="far fa-envelope">
+                    </i>
+                    <a href="mailto:@Model.Email!.Address">
+                        @Model.Email.Address
+                    </a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone-volume">
+                    </i>
+                    <a href="tel:@Model.Phone!.Number">
+                        @Model.Phone.Number
+                    </a>
+                </li>
+            </ul>
+            <div class="top-left">
+                <div class="flag-wrap">
+                    <div class="flag">
+                        @foreach (var lang in Model.Languages!.Where(lang => langId == lang.Id))
+                        {
+                            <img alt="@lang.Image!.Alt" title="@lang.Image.Title" src="/img/@lang.Image.Address" />
+                        }
+                    </div>
+                    <div class="nice-select" tabindex="0">
+                        @foreach (var lang in Model.Languages!.Where(lang => lang.Id == langId))
+                        {
+                            <span class="current">
+                                lang.Name;
+                            </span>
+                        }
+                        <ul class="list">
+                            @foreach (var lang in Model.Languages!)
+                            {
+                                <li class="option @((langId == lang.Id) ? "selected focus" : null)" data-value="@lang.Id">
+                                    @lang.Name
+                                </li>
+                            }
+                            @*                             <li class="option selected focus" data-value="1">
+                            انگلیسی
+                            </li> *@
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="social-icon d-flex align-items-center">
+                    <span>
+                        ما را دنبال کنید:
+                    </span>
+                    @foreach (var media in Model.SocialMedias)
+                    {
+                        <a href="@media.Link" title="@media.Media">
+                            @Html.Raw(media.Icon)
+                        </a>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

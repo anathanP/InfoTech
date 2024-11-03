@@ -1,6 +1,6 @@
 ﻿using InfoTech.DataAccess.Repositories.IRepositories;
-using InfoTech.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using InfoTech.DataAccess.ViewModels;
 
 namespace InfoTechWeb.Areas.Customer.Controllers
 {
@@ -14,13 +14,7 @@ namespace InfoTechWeb.Areas.Customer.Controllers
         }
         public IActionResult Index()
         {
-            var model = new TopHeaderViewModel
-            {
-                Email = _unitOfWork.Emails.GetById(1),
-                Phone = _unitOfWork.Phones.GetById(1),
-                Languages = _unitOfWork.Languages.GetAll().ToList(),
-                SocialMedias = _unitOfWork.SocialMedias.GetAll().ToList()
-            };
+            var model = new CustomerLayoutViewModel(_unitOfWork);
             return View(model);
         }
     }
