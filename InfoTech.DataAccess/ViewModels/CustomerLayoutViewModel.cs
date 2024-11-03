@@ -12,7 +12,7 @@ namespace InfoTech.DataAccess.ViewModels
             {
                 Email = unitOfWork.Emails.GetById(1),
                 Phone = unitOfWork.Phones.GetById(1),
-                Languages = unitOfWork.Languages.GetAll().ToList(),
+                Languages = unitOfWork.Languages.GetAllLazyLoad(l => l.Image!).ToList(),
                 SocialMedias = unitOfWork.SocialMedias.GetAll().ToList()
             };
         }

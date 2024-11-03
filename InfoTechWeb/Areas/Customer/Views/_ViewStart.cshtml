@@ -1,4 +1,7 @@
 ﻿@{
     Layout = "_Layout";
-    Context.Response.Cookies.Append("SetLanguage", "1");
+    Context.Response.Cookies.Append("SetLanguage", "1", new CookieOptions
+    {
+        Expires = DateTime.Now.AddDays(700)
+    });
 }

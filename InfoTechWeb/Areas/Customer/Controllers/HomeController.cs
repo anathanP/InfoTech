@@ -11,6 +11,7 @@ namespace InfoTechWeb.Areas.Customer.Controllers
         public HomeController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
+            
         }
         public IActionResult Index()
         {

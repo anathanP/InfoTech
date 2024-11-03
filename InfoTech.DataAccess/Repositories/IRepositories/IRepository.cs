@@ -2,7 +2,7 @@
 
 namespace InfoTech.DataAccess.Repositories.IRepositories
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<T>  where T : class
     {
         T? GetById(int id);
         T? Get(Expression<Func<T, bool>> filter);
@@ -11,5 +11,7 @@ namespace InfoTech.DataAccess.Repositories.IRepositories
         void Add(T entity);
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entities);
+        IQueryable<T> GetAllLazyLoad(params Expression<Func<T, object>>[] children);
+
     }
 }
