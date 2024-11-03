@@ -1,4 +1,6 @@
-﻿<header>
+﻿@model TopHeaderViewModel
+
+<header>
     <div class="header-top-section top-style-3">
         <div class="container">
             <div class="header-top-wrapper">
@@ -6,15 +8,15 @@
                     <li>
                         <i class="far fa-envelope">
                         </i>
-                        <a class="link" href="mailto:info@example.com">
-                            info@example.com
+                        <a class="link" href="mailto:@Model.Email.Address">
+                            @Model.Email.Address
                         </a>
                     </li>
                     <li>
                         <i class="fa-solid fa-phone-volume">
                         </i>
-                        <a href="tel:2086660112">
-                            +208-666-0112
+                        <a href="tel:@Model.Phone.Number">
+                            @Model.Phone.Number
                         </a>
                     </li>
                 </ul>

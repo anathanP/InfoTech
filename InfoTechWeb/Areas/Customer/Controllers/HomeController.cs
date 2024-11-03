@@ -14,7 +14,14 @@ namespace InfoTechWeb.Areas.Customer.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var model = new TopHeaderViewModel
+            {
+                Email = _unitOfWork.Emails.GetById(1),
+                Phone = _unitOfWork.Phones.GetById(1),
+                Languages = _unitOfWork.Languages.GetAll().ToList(),
+                SocialMedias = _unitOfWork.SocialMedias.GetAll().ToList()
+            };
+            return View(model);
         }
     }
 }

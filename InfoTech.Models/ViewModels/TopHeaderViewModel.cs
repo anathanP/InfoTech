@@ -2,7 +2,7 @@
 
 namespace InfoTech.Models.ViewModels
 {
-    public class HeaderViewModel
+    public class TopHeaderViewModel
     {
         public Email? Email { get; set; }
         public Phone? Phone { get; set; }

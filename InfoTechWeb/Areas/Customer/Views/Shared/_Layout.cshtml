@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model TopHeaderViewModel
+
+<!DOCTYPE html>
 <html lang="en">
 <!--<< Header Area >>-->
 <partial name="_HeadArea" />
@@ -8,7 +10,7 @@
     <!-- Offcanvas Area Start -->
     <partial name="_OffcanvasArea" />
     <!-- Header Section Start -->
-    <partial name="_Header" />
+    <partial name="_Header" model="Model" />
     <main>
         @RenderBody()
     </main>
