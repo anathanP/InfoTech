@@ -7,7 +7,8 @@
         ILanguageRepo Languages { get; }
         IImageRepo Images { get; }
         ISocialMediaRepo SocialMedias { get; }
-
+        IPageRepo Pages { get; }
+        ISubPageRepo SubPages { get; }
 
         void Save();
     }

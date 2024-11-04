@@ -56,5 +56,11 @@ namespace InfoTech.DataAccess.Repositories
             children.ToList().ForEach(x=>_dbSet.Include(x).Load());
             return _dbSet;
         }
+
+        public IQueryable<T> GetConditionalLazyLoad(Expression<Func<T, bool>> filter, params Expression<Func<T, object>>[] children)
+        {
+            children.ToList().ForEach(x=>_dbSet.Include(x).Load());
+            return _dbSet;
+        }
     }
 }

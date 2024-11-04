@@ -11,6 +11,8 @@ namespace InfoTech.DataAccess.Repositories
         public ILanguageRepo Languages { get; }
         public IImageRepo Images { get; }
         public ISocialMediaRepo SocialMedias { get; }
+        public IPageRepo Pages { get; }
+        public ISubPageRepo SubPages { get; }
 
         public UnitOfWork(AppDbContext db)
         {
@@ -20,6 +22,8 @@ namespace InfoTech.DataAccess.Repositories
             Languages = new LanguageRepo(_db);
             Images = new ImageRepo(_db);
             SocialMedias = new SocialMediaRepo(_db);
+            Pages = new PageRepo(_db);
+            SubPages = new SubPageRepo(_db);
         }
         public void Save()
         {

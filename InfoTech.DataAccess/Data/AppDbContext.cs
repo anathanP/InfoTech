@@ -17,11 +17,14 @@ namespace InfoTech.DataAccess.Data
         public DbSet<Language>? Languages { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
+        public DbSet<Page> Pages { get; set; }
+        public DbSet<SubPage> SubPages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new ImageConfiguration());
+            modelBuilder.ApplyConfiguration(new PageConfiguration());
         }
     }
 }

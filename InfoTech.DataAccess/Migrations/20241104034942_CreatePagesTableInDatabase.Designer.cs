@@ -3,6 +3,7 @@ using InfoTech.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoTech.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241104034942_CreatePagesTableInDatabase")]
+    partial class CreatePagesTableInDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -187,52 +190,6 @@ namespace InfoTech.DataAccess.Migrations
                     b.ToTable("SocialMedias");
                 });
 
-            modelBuilder.Entity("InfoTech.Models.SubPage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Action")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("Author")
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<string>("Keywords")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<int>("PageId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PageId");
-
-                    b.ToTable("SubPage");
-                });
-
             modelBuilder.Entity("InfoTech.Models.Language", b =>
                 {
                     b.HasOne("InfoTech.Models.Image", "Image")
@@ -244,25 +201,9 @@ namespace InfoTech.DataAccess.Migrations
                     b.Navigation("Image");
                 });
 
-            modelBuilder.Entity("InfoTech.Models.SubPage", b =>
-                {
-                    b.HasOne("InfoTech.Models.Page", "Page")
-                        .WithMany("SubPages")
-                        .HasForeignKey("PageId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Page");
-                });
-
             modelBuilder.Entity("InfoTech.Models.Image", b =>
                 {
                     b.Navigation("Language");
-                });
-
-            modelBuilder.Entity("InfoTech.Models.Page", b =>
-                {
-                    b.Navigation("SubPages");
                 });
 #pragma warning restore 612, 618
         }
