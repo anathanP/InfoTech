@@ -25,6 +25,10 @@ namespace InfoTech.DataAccess.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new ImageConfiguration());
             modelBuilder.ApplyConfiguration(new PageConfiguration());
+            modelBuilder.ApplyConfiguration(new EmailConfiguration());
+            modelBuilder.ApplyConfiguration(new PhoneConfiguration());
+            modelBuilder.ApplyConfiguration(new LanguageConfiguration());
+            modelBuilder.ApplyConfiguration(new SocialMediaConfiguration());
         }
     }
 }

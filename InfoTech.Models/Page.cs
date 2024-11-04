@@ -16,7 +16,7 @@ namespace InfoTech.Models
         [MaxLength(200)]
         public string? Description { get; set; }
         [Required]
-        [MaxLength(20)]
+        [MaxLength(60)]
         public string? Action { get; set; }
         [MaxLength(100)]
         public string? Keywords { get; set; }

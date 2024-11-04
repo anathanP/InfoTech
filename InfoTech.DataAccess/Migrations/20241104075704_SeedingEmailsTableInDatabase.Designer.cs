@@ -3,6 +3,7 @@ using InfoTech.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoTech.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241104075704_SeedingEmailsTableInDatabase")]
+    partial class SeedingEmailsTableInDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -75,22 +78,6 @@ namespace InfoTech.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Images");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Address = "flags/Iran-flag.jpeg",
-                            Alt = "پرچم کشور ایران",
-                            Title = "Iran Flag"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Address = "flags/England-flag.jpeg",
-                            Alt = "English Flag",
-                            Title = "England Flag"
-                        });
                 });
 
             modelBuilder.Entity("InfoTech.Models.Language", b =>
@@ -121,24 +108,6 @@ namespace InfoTech.DataAccess.Migrations
                         .IsUnique();
 
                     b.ToTable("Languages");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Active = true,
-                            ImageId = 1,
-                            Name = "فارسی",
-                            Status = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Active = false,
-                            ImageId = 2,
-                            Name = "English",
-                            Status = 1
-                        });
                 });
 
             modelBuilder.Entity("InfoTech.Models.Page", b =>
@@ -263,14 +232,6 @@ namespace InfoTech.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Phones");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Number = "+989369043949",
-                            Status = 1
-                        });
                 });
 
             modelBuilder.Entity("InfoTech.Models.SocialMedia", b =>
@@ -297,36 +258,6 @@ namespace InfoTech.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("SocialMedias");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Icon = "<i class=\"bi bi-telegram\"></i>",
-                            Link = "https://www.t.me/Abbasmasoud",
-                            Media = "Telegram"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Icon = "<i class=\"bi bi-whatsapp\"></i>",
-                            Link = "+989369043949",
-                            Media = "Whatsapp"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Icon = "<i class=\"bi bi-instagram\"></i>",
-                            Link = "https://www.instagram.com/leoneltech1?igsh=MXBycmQybXQ0bmVjaw==",
-                            Media = "Instagram"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Icon = "<i class=\"bi bi-linkedin\"></i>",
-                            Link = "https://www.linkedin.com/in/abbas-masoud-0681a5315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_mdeium=android_app",
-                            Media = "LinkedIn"
-                        });
                 });
 
             modelBuilder.Entity("InfoTech.Models.SubPage", b =>

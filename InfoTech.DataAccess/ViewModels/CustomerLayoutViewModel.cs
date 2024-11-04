@@ -1,10 +1,12 @@
 ﻿using InfoTech.DataAccess.Repositories.IRepositories;
+using InfoTech.Utilities;
 
 namespace InfoTech.DataAccess.ViewModels
 {
     public class CustomerLayoutViewModel
     {
         public TopHeaderViewModel TopHeaderViewModel { get; set; }
+        public HeaderViewModel HeaderViewModel{ get; set; }
 
         public CustomerLayoutViewModel(IUnitOfWork unitOfWork)
         {
@@ -14,6 +16,13 @@ namespace InfoTech.DataAccess.ViewModels
                 Phone = unitOfWork.Phones.GetById(1),
                 Languages = unitOfWork.Languages.GetAllLazyLoad(l => l.Image!).ToList(),
                 SocialMedias = unitOfWork.SocialMedias.GetAll().ToList()
+            };
+
+            HeaderViewModel = new HeaderViewModel
+            {
+                Pages = unitOfWork.Pages.GetAllLazyLoad(p => p.SubPages!).ToList(),
+                Logo = unitOfWork.Images.GetById(2),
+                Theme = Sd.Theme.Light
             };
         }
     }
