@@ -19,7 +19,8 @@ namespace InfoTech.DataAccess.Data
         public DbSet<SocialMedia> SocialMedias { get; set; }
         public DbSet<Page> Pages { get; set; }
         public DbSet<SubPage> SubPages { get; set; }
-
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<WorkTime> WorkTimes { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -29,6 +30,8 @@ namespace InfoTech.DataAccess.Data
             modelBuilder.ApplyConfiguration(new PhoneConfiguration());
             modelBuilder.ApplyConfiguration(new LanguageConfiguration());
             modelBuilder.ApplyConfiguration(new SocialMediaConfiguration());
+            modelBuilder.ApplyConfiguration(new AddressConfiguration());
+            modelBuilder.ApplyConfiguration(new WorkTimeConfiguration());
         }
     }
 }

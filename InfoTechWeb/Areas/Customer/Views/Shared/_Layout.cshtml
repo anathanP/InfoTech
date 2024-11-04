@@ -1,11 +1,7 @@
 ﻿@model CustomerLayoutViewModel
 @{
     var currentPage = Context.Request.Path.ToUriComponent();
-    var pageInModel = Model.HeaderViewModel.Pages!.SingleOrDefault(p => p.Action == currentPage);
-    if (pageInModel == null)
-    {
-        pageInModel = Model.HeaderViewModel.Pages!.Single(p => p.Id == 1);
-    }
+    var pageInModel = Model.HeaderViewModel.Pages!.SingleOrDefault(p => p.Action == currentPage) ?? Model.HeaderViewModel.Pages!.Single(p => p.Id == 1);
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +11,7 @@
     <!-- Preloader Start -->
     <partial name="_Preloader" />
     <!-- Offcanvas Area Start -->
-    <partial name="_OffcanvasArea" />
+    <partial name="_OffcanvasArea" model="Model.HeaderViewModel"/>
     <!-- Header Section Start -->
     <partial name="_Header" model="Model.HeaderViewModel" />
     <main>

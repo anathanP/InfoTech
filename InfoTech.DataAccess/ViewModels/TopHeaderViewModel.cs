@@ -8,5 +8,7 @@ namespace InfoTech.DataAccess.ViewModels
         public Phone? Phone { get; set; }
         public List<Language>? Languages { get; set; }
         public List<SocialMedia>? SocialMedias { get; set; }
+        public Address? Address { get; set; }
+        public List<WorkTime>? WorkTimes { get; set; }
     }
 }

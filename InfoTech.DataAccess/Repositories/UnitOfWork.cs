@@ -13,6 +13,8 @@ namespace InfoTech.DataAccess.Repositories
         public ISocialMediaRepo SocialMedias { get; }
         public IPageRepo Pages { get; }
         public ISubPageRepo SubPages { get; }
+        public IAddressRepo Addresses { get; }
+        public IWorkTimeRepo WorkTimes { get; }
 
         public UnitOfWork(AppDbContext db)
         {
@@ -24,6 +26,8 @@ namespace InfoTech.DataAccess.Repositories
             SocialMedias = new SocialMediaRepo(_db);
             Pages = new PageRepo(_db);
             SubPages = new SubPageRepo(_db);
+            Addresses = new AddressRepo(_db);
+            WorkTimes = new WorkTimeRepo(_db);
         }
         public void Save()
         {
