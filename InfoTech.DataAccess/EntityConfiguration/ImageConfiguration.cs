@@ -21,7 +21,11 @@ namespace InfoTech.DataAccess.EntityConfiguration
                     {
                         Id = 1, Address = "flags/Iran-flag.jpeg", Alt = "پرچم کشور ایران", Title = "Iran Flag"
                     },
-                    new Image { Id = 2, Address = "flags/England-flag.jpeg", Alt = "English Flag", Title = "England Flag" }
+                    new Image { Id = 2, Address = "flags/England-flag.jpeg", Alt = "English Flag", Title = "England Flag" },
+                    new Image
+                    {
+                        Id = 3, Address = "logo/black-logo.svg", Alt = "لوگوی صفحه", Title = "لوگوی صفحه"
+                    }
                 );
         }
     }

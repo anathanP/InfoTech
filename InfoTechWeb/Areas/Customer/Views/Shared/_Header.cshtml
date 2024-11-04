@@ -1,7 +1,7 @@
-﻿@model TopHeaderViewModel
+﻿@model HeaderViewModel
 
 <header>
-    <partial name="_TopHeader" model="Model"/>
+    <partial name="_TopHeader" model="Model.TopHeaderViewModel" />
     <div class="header-3" id="header-sticky">
         <div class="plane-shape">
             <img alt="shape-img" src="/img/plane.png" />
@@ -11,8 +11,8 @@
                 <div class="header-main">
                     <div class="header-right">
                         <div class="logo">
-                            <a class="header-logo" href="index.html">
-                                <img alt="logo-img" src="/img/logo/black-logo.svg" />
+                            <a class="header-logo" asp-controller="Home" asp-action="Index">
+                                <img alt="@Model.Logo!.Alt" title="@Model.Logo.Title" src="/img/@Model.Logo.Address" />
                             </a>
                         </div>
                     </div>
@@ -21,237 +21,34 @@
                             <div class="main-menu">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        <li class="has-dropdown active menu-thumb">
-                                            <a href="index.html">
-                                                صفحه اصلی
-                                                <i class="fas fa-angle-down">
-                                                </i>
-                                            </a>
-                                            <ul class="submenu has-homemenu">
-                                                <li>
-                                                    <div class="homemenu-items">
-                                                        <div class="homemenu">
-                                                            <div class="homemenu-thumb">
-                                                                <img alt="img" src="/img/header/home-1.jpg" />
-                                                                <div class="demo-button">
-                                                                    <a class="theme-btn" href="index.html">
-                                                                        <span>
-                                                                            چند صفحه
-                                                                        </span>
-                                                                    </a>
-                                                                    <a class="theme-btn" href="index-one-page.html">
-                                                                        <span>
-                                                                            یک صفحه
-                                                                        </span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu-content text-center">
-                                                                <h4 class="homemenu-title">
-                                                                    صفحه اصلی 01
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="homemenu">
-                                                            <div class="homemenu-thumb mb-15">
-                                                                <img alt="img" src="/img/header/home-2.jpg" />
-                                                                <div class="demo-button">
-                                                                    <a class="theme-btn" href="index-2.html">
-                                                                        <span>
-                                                                            چند صفحه
-                                                                        </span>
-                                                                    </a>
-                                                                    <a class="theme-btn" href="index-two-page.html">
-                                                                        <span>
-                                                                            یک صفحه
-                                                                        </span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu-content text-center">
-                                                                <h4 class="homemenu-title">
-                                                                    صفحه اصلی 02
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="homemenu">
-                                                            <div class="homemenu-thumb mb-15">
-                                                                <img alt="img" src="/img/header/home-3.jpg" />
-                                                                <div class="demo-button">
-                                                                    <a class="theme-btn" href="index-3.html">
-                                                                        <span>
-                                                                            چند صفحه
-                                                                        </span>
-                                                                    </a>
-                                                                    <a class="theme-btn" href="index-three-page.html">
-                                                                        <span>
-                                                                            یک صفحه
-                                                                        </span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu-content text-center">
-                                                                <h4 class="homemenu-title">
-                                                                    صفحه اصلی 03
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                        <div class="homemenu">
-                                                            <div class="homemenu-thumb mb-15">
-                                                                <img alt="img" src="/img/header/home-4.jpg" />
-                                                                <div class="demo-button">
-                                                                    <a class="theme-btn" href="index-4.html">
-                                                                        <span>
-                                                                            چند صفحه
-                                                                        </span>
-                                                                    </a>
-                                                                    <a class="theme-btn" href="index-four-page.html">
-                                                                        <span>
-                                                                            یک صفحه
-                                                                        </span>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="homemenu-content text-center">
-                                                                <h4 class="homemenu-title">
-                                                                    صفحه اصلی 04
-                                                                </h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="about.html">
-                                                درباره
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="news.html">
-                                                خدمات
-                                                <i class="fas fa-angle-down">
-                                                </i>
-                                            </a>
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="service.html">
-                                                        خدمات
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="service-carousel.html">
-                                                        خدمات کروسل
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="service-details.html">
-                                                        جزئیات خدمات
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="news.html">
-                                                صفحات
-                                                <i class="fas fa-angle-down">
-                                                </i>
-                                            </a>
-                                            <ul class="submenu">
-                                                <li class="has-dropdown">
-                                                    <a href="project.html">
-                                                        پروژه ها
-                                                        <i class="fas fa-angle-down">
-                                                        </i>
-                                                    </a>
+                                        @foreach (var item in Model.Pages!)
+                                        {
+
+                                            <li>
+                                                <a href="@item.Action">
+                                                    @item.Name
+                                                    @if (item.SubPages!.Count != 0)
+                                                    {
+                                                        <i class="fas fa-angle-down"></i>
+                                                    }
+                                                </a>
+                                                @if (item.SubPages!.Count != 0)
+                                                {
                                                     <ul class="submenu">
-                                                        <li>
-                                                            <a href="project.html">
-                                                                پروژه
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="project-carousel.html">
-                                                                پروژه کروسل
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="project-details.html">
-                                                                جزئیات پروژه
-                                                            </a>
-                                                        </li>
+                                                        @foreach (var subPage in item.SubPages)
+                                                        {
+                                                            <li>
+                                                                <a href="@subPage.Action">
+                                                                    @subPage.Name
+                                                                </a>
+                                                            </li>
+                                                        }
                                                     </ul>
-                                                </li>
-                                                <li class="has-dropdown">
-                                                    <a href="team.html">
-                                                        تیم
-                                                        <i class="fas fa-angle-down">
-                                                        </i>
-                                                    </a>
-                                                    <ul class="submenu">
-                                                        <li>
-                                                            <a href="team.html">
-                                                                تیم ما
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="team-carousel.html">
-                                                                تيم کروسل
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="team-details.html">
-                                                                جزئیات تیم
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="pricing.html">
-                                                        قیمت گذاری
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="faq.html">
-                                                        سوالات متداول
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="404.html">
-                                                        صفحه 404
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="news.html">
-                                                وبلاگ
-                                                <i class="fas fa-angle-down">
-                                                </i>
-                                            </a>
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="news.html">
-                                                        وبلاگ گريد
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="news-standard.html">
-                                                        وبلاگ استاندارد
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="news-details.html">
-                                                        جزئیات وبلاگ
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="contact.html">
-                                                تماس
-                                            </a>
-                                        </li>
+                                                }
+                                            </li>
+
+                                        }
+
                                     </ul>
                                 </nav>
                             </div>
@@ -263,7 +60,7 @@
                         <div class="header-button">
                             <a class="theme-btn bg-white" href="contact.html">
                                 <span>
-                                    دریافت یک نقل قول
+                                    @Model.Theme 
                                     <i class="fa-solid fa-arrow-left-long">
                                     </i>
                                 </span>

@@ -8,5 +8,6 @@ namespace InfoTech.DataAccess.ViewModels
         public Image? Logo { get; set; }
         public List<Page>? Pages { get; set; }
         public Sd.Theme Theme { get; set; }
+        public TopHeaderViewModel? TopHeaderViewModel { get; set; }
     }
 }
