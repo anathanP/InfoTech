@@ -192,7 +192,7 @@ namespace InfoTech.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Action = "Customer/Home/Index",
+                            Action = "/Customer/Home/Index",
                             Author = "Anathan",
                             Description = "صفحه نخست سایت اینفو تک",
                             Keywords = "Home, info tech, C#",
@@ -202,7 +202,7 @@ namespace InfoTech.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            Action = "Customer/Home/About",
+                            Action = "/Customer/Home/About",
                             Author = "Anathan",
                             Description = "صفحه نخست سایت اینفو تک",
                             Keywords = "Home, info tech, C#",
@@ -212,7 +212,7 @@ namespace InfoTech.DataAccess.Migrations
                         new
                         {
                             Id = 3,
-                            Action = "Customer/Home/Services",
+                            Action = "/Customer/Home/Services",
                             Author = "Anathan",
                             Description = "صفحه نخست سایت اینفو تک",
                             Keywords = "Home, info tech, C#",
@@ -222,7 +222,7 @@ namespace InfoTech.DataAccess.Migrations
                         new
                         {
                             Id = 4,
-                            Action = "Customer/Home/Pages",
+                            Action = "/Customer/Home/Pages",
                             Author = "Anathan",
                             Description = "صفحه نخست سایت اینفو تک",
                             Keywords = "Home, info tech, C#",
@@ -232,7 +232,7 @@ namespace InfoTech.DataAccess.Migrations
                         new
                         {
                             Id = 5,
-                            Action = "Customer/Home/Blogs",
+                            Action = "/Customer/Home/Blogs",
                             Author = "Anathan",
                             Description = "صفحه نخست سایت اینفو تک",
                             Keywords = "Home, info tech, C#",
@@ -242,7 +242,7 @@ namespace InfoTech.DataAccess.Migrations
                         new
                         {
                             Id = 6,
-                            Action = "Customer/Home/Contact",
+                            Action = "/Customer/Home/Contact",
                             Author = "Anathan",
                             Description = "صفحه نخست سایت اینفو تک",
                             Keywords = "Home, info tech, C#",

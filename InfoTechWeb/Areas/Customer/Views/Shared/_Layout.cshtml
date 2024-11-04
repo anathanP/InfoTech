@@ -1,9 +1,16 @@
 ﻿@model CustomerLayoutViewModel
-
+@{
+    var currentPage = Context.Request.Path.ToUriComponent();
+    var pageInModel = Model.HeaderViewModel.Pages!.SingleOrDefault(p => p.Action == currentPage);
+    if (pageInModel == null)
+    {
+        pageInModel = Model.HeaderViewModel.Pages!.Single(p => p.Id == 1);
+    }
+}
 <!DOCTYPE html>
 <html lang="en">
 <!--<< Header Area >>-->
-<partial name="_HeadArea" />
+<partial name="_HeadArea" model="pageInModel"/>
 <body>
     <!-- Preloader Start -->
     <partial name="_Preloader" />

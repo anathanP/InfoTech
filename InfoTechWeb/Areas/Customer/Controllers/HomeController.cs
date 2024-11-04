@@ -15,7 +15,13 @@ namespace InfoTechWeb.Areas.Customer.Controllers
         }
         public IActionResult Index()
         {
-            var model = new CustomerLayoutViewModel(_unitOfWork);
+            var model = new CustomerIndexViewModel(_unitOfWork);
+            return View(model);
+        }
+
+        public IActionResult About()
+        {
+            var model = new AboutViewModel(_unitOfWork);
             return View(model);
         }
     }

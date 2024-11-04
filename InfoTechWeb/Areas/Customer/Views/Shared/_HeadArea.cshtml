@@ -1,13 +1,15 @@
-﻿<head>
+﻿@model Page
+<head>
     <!-- ========== Meta Tags ========== -->
     <meta charset="utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="gramentheme" name="author" />
-    <meta content="Infotek - IT Solution &amp; Technology HTML Template" name="description" />
+    <meta content="@Model.Author" name="author" />
+    <meta content="@Model.Description" name="description" />
+    <meta content="@Model.Keywords" name="keywords" />
     <!-- ======== Page title ============ -->
     <title>
-        اينفوتک
+        @Model.Title
     </title>
     <!--<< Favcion >>-->
     <link href="/img/favicon.svg" rel="shortcut icon" />
