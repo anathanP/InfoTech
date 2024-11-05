@@ -42,9 +42,9 @@ namespace InfoTech.DataAccess.Migrations
                 values: new object[,]
                 {
                     { 8, "brand.png", "عکس برند", "عکس برند" },
-                    { 9, "about/05.png", "عکس برند", "عکس برند" },
-                    { 10, "about/05.png", "عکس برند", "عکس برند" },
-                    { 11, "about/05.png", "عکس برند", "عکس برند" }
+                    { 9, "brand.png", "عکس برند", "عکس برند" },
+                    { 10, "brand.png", "عکس برند", "عکس برند" },
+                    { 11, "brand.png", "عکس برند", "عکس برند" }
                 });
 
             migrationBuilder.InsertData(

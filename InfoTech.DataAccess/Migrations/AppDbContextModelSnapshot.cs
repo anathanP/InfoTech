@@ -354,21 +354,21 @@ namespace InfoTech.DataAccess.Migrations
                         new
                         {
                             Id = 9,
-                            Address = "about/05.png",
+                            Address = "brand.png",
                             Alt = "عکس برند",
                             Title = "عکس برند"
                         },
                         new
                         {
                             Id = 10,
-                            Address = "about/05.png",
+                            Address = "brand.png",
                             Alt = "عکس برند",
                             Title = "عکس برند"
                         },
                         new
                         {
                             Id = 11,
-                            Address = "about/05.png",
+                            Address = "brand.png",
                             Alt = "عکس برند",
                             Title = "عکس برند"
                         });

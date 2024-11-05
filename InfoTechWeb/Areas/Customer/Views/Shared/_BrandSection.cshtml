@@ -4,14 +4,14 @@
 <div class="container">
     <div class="brand-wrapper">
         <h6 class="text-center wow fadeInUp" data-wow-delay=".3s">
-            @Model.Brands!.Count @Model.Section!.Title
+             @Model.Section!.Title
         </h6>
         <div class="swiper brand-slider">
             <div class="swiper-wrapper">
                 @foreach (var item in Model.Brands)
                 {
                     <div class="swiper-slide">
-                        <div class="brand-image">
+                        <div class="brand-image" style="width: 154px; height: 31px;">
                             <img alt="@item.Image!.Alt" title="@item.Image.Title" src="/img/@item.Image.Address"/>
                         </div>
                     </div>

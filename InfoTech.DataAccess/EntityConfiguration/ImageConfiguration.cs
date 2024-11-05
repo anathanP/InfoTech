@@ -65,15 +65,15 @@ namespace InfoTech.DataAccess.EntityConfiguration
                     },
                     new Image
                     {
-                        Id = 9, Address = "about/05.png", Alt = "عکس برند", Title = "عکس برند"
+                        Id = 9, Address = "brand.png", Alt = "عکس برند", Title = "عکس برند"
                     },
                     new Image
                     {
-                        Id = 10, Address = "about/05.png", Alt = "عکس برند", Title = "عکس برند"
+                        Id = 10, Address = "brand.png", Alt = "عکس برند", Title = "عکس برند"
                     },
                     new Image
                     {
-                        Id = 11, Address = "about/05.png", Alt = "عکس برند", Title = "عکس برند"
+                        Id = 11, Address = "brand.png", Alt = "عکس برند", Title = "عکس برند"
                     }
                 );
         }
