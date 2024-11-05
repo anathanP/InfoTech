@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoTech.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241105065158_CreateAndSeedHeroBannersTableInDatabase")]
-    partial class CreateAndSeedHeroBannersTableInDatabase
+    [Migration("20241105133709_CreateAndSeedBothTablesHeroBannersAndSectionsInDatabase")]
+    partial class CreateAndSeedBothTablesHeroBannersAndSectionsInDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -112,9 +112,17 @@ namespace InfoTech.DataAccess.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
+                    b.Property<string>("EmptyButtonAction")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<string>("EmptyButtonCaption")
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("FillButtonAction")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("FillButtonCaption")
                         .HasMaxLength(30)
@@ -142,7 +150,9 @@ namespace InfoTech.DataAccess.Migrations
                         {
                             Id = 1,
                             Description = "آموزش شکلات برنزی و ارتقای عمر محصول را به دنبال خواهد داشت. همه می خواهند تکالیف خود را در دوره انجام دهند، اما اعضای مدرسه به آن نیاز دارند",
+                            EmptyButtonAction = "/Customer/Home/About",
                             EmptyButtonCaption = "بیشتر کاوش کنید",
+                            FillButtonAction = "/Customer/Home/Contact",
                             FillButtonCaption = "با ما تماس بگیرید",
                             ImageId = 4,
                             Tag = "بهترین شرکت",
@@ -152,7 +162,9 @@ namespace InfoTech.DataAccess.Migrations
                         {
                             Id = 2,
                             Description = "آموزش شکلات برنزی و ارتقای عمر محصول را به دنبال خواهد داشت. همه می خواهند تکالیف خود را در دوره انجام دهند، اما اعضای مدرسه به آن نیاز دارند",
+                            EmptyButtonAction = "/Customer/Home/About",
                             EmptyButtonCaption = "بیشتر کاوش کنید",
+                            FillButtonAction = "/Customer/Home/Contact",
                             FillButtonCaption = "با ما تماس بگیرید",
                             ImageId = 5,
                             Tag = "بهترین شرکت",
@@ -162,7 +174,9 @@ namespace InfoTech.DataAccess.Migrations
                         {
                             Id = 3,
                             Description = "آموزش شکلات برنزی و ارتقای عمر محصول را به دنبال خواهد داشت. همه می خواهند تکالیف خود را در دوره انجام دهند، اما اعضای مدرسه به آن نیاز دارند",
+                            EmptyButtonAction = "/Customer/Home/About",
                             EmptyButtonCaption = "بیشتر کاوش کنید",
+                            FillButtonAction = "/Customer/Home/Contact",
                             FillButtonCaption = "با ما تماس بگیرید",
                             ImageId = 6,
                             Tag = "بهترین شرکت",
@@ -419,6 +433,62 @@ namespace InfoTech.DataAccess.Migrations
                             Id = 1,
                             Number = "+989369043949",
                             Status = 1
+                        });
+                });
+
+            modelBuilder.Entity("InfoTech.Models.Section", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("EmptyButtonAction")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("EmptyButtonCaption")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("FillButtonAction")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("FillButtonCaption")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<int>("IndexSections")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Tag")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("Title")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Sections");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "ما در این موسسه افتخار این را داریم که بگوییم بهترین هستیم و همیشه حق با مشتری است",
+                            FillButtonAction = "/Customer/Home/About",
+                            FillButtonCaption = "درباره ما",
+                            IndexSections = 0,
+                            Tag = "درباره اینفوتک",
+                            Title = "بزرگترین شرکت تکنولوژی ایران"
                         });
                 });
 

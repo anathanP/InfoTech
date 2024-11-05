@@ -39,12 +39,12 @@
                                         @Html.Raw(banner.Description)
                                     </p>
                                     <div class="hero-button">
-                                        <a class="theme-btn hover-white" data-animation="slideInLeft" data-delay=".9s" data-duration="2s" href="about.html">
+                                        <a class="theme-btn hover-white" data-animation="slideInLeft" data-delay=".9s" data-duration="2s" href="@banner.EmptyButtonAction">
                                             @banner.EmptyButtonCaption
                                             <i class="fa-solid fa-arrow-left-long">
                                             </i>
                                         </a>
-                                        <a class="theme-btn border-white" data-animation="slideInLeft" data-delay=".9s" data-duration="2s" href="contact.html">
+                                        <a class="theme-btn border-white" data-animation="slideInLeft" data-delay=".9s" data-duration="2s" href="@banner.FillButtonAction">
                                             @banner.FillButtonCaption
                                             <i class="fa-solid fa-arrow-left-long">
                                             </i>

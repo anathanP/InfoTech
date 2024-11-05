@@ -1,4 +1,5 @@
-﻿@model HeaderViewModel
+﻿@using InfoTech.Utilities
+@model HeaderViewModel
 
 
 <div class="fix-area">
@@ -60,7 +61,11 @@
                                 <a href="#" target="_blank">
                                     @foreach (var work in Model.TopHeaderViewModel.WorkTimes!)
                                     {
-                                        @work.StartDay @if(work.EndDay != null) {<span> تا @work.EndDay</span>} <span>, @work.StartTime.ToString() تا @work.EndTime.ToString()</span>
+                                        @Sd.DayOfWeekTranslate(work.StartDay) @if (work.EndDay != null)
+                                        {
+                                            <span> تا @Sd.DayOfWeekTranslate(work.EndDay)</span>
+                                        } <span>, @work.StartTime.ToString() تا @work.EndTime.ToString()</span>
+                                                                                                        <br/>
                                     }
                                 </a>
                             </div>

@@ -16,6 +16,7 @@ namespace InfoTech.DataAccess.Repositories
         public IAddressRepo Addresses { get; }
         public IWorkTimeRepo WorkTimes { get; }
         public IHeroBannerRepo HeroBanners { get; }
+        public ISectionRepo Sections { get; }
 
         public UnitOfWork(AppDbContext db)
         {
@@ -30,6 +31,7 @@ namespace InfoTech.DataAccess.Repositories
             Addresses = new AddressRepo(_db);
             WorkTimes = new WorkTimeRepo(_db);
             HeroBanners = new HeroBannerRepo(_db);
+            Sections = new SectionRepo(_db);
         }
         public void Save()
         {

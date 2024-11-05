@@ -13,12 +13,12 @@ namespace InfoTech.DataAccess.EntityConfiguration
                 .HasData(
                     new WorkTime
                     {
-                        Id = 1, StartDay = Sd.DayOfWeek.شنبه, EndDay = Sd.DayOfWeek.چهارشنبه,
+                        Id = 1, StartDay = Sd.DayOfWeek.Saturday, EndDay = Sd.DayOfWeek.Wednesday,
                         StartTime = new TimeOnly(8, 0), EndTime = new TimeOnly(18, 0)
                     },
                     new WorkTime
                     {
-                        Id = 2, StartDay = Sd.DayOfWeek.پنجشنبه, StartTime = new TimeOnly(8, 0), EndTime = new TimeOnly(14, 0)
+                        Id = 2, StartDay = Sd.DayOfWeek.Thursday, StartTime = new TimeOnly(8, 0), EndTime = new TimeOnly(14, 0)
                     }
                 );
         }

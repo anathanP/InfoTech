@@ -1,19 +1,20 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using InfoTech.Utilities;
 
 namespace InfoTech.Models
 {
-    public class HeroBanner
+    public class Section
     {
         [Key]
         public int Id { get; set; }
-        public Image? Image { get; set; }
-        public int ImageId { get; set; }
+        [Required]
+        public Sd.IndexSections IndexSections { get; set; }
         [MaxLength(30)]
         public string? Tag { get; set; }
-        [MaxLength(60)]
-        public string? Title { get; set; }
         [MaxLength(200)]
         public string? Description { get; set; }
+        [MaxLength(100)]
+        public string? Title { get; set; }
         [MaxLength(30)]
         public string? FillButtonCaption { get; set; }
         [MaxLength(30)]

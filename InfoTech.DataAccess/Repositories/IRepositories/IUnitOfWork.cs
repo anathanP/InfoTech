@@ -12,7 +12,7 @@
         IAddressRepo Addresses { get; }
         IWorkTimeRepo WorkTimes { get; }
         IHeroBannerRepo HeroBanners { get; }
-
+        ISectionRepo Sections { get; }
         void Save();
     }
 }

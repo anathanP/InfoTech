@@ -26,13 +26,43 @@
 
         public enum DayOfWeek
         {
-            شنبه,
-            یکشنبه ,
-            دوشنبه,
-            سهشنبه,
-            چهارشنبه ,
-            پنجشنبه ,
-            حمعه
+            Saturday,
+            Sunday,
+            Monday,
+            Tuesday,
+            Wednesday,
+            Thursday,
+            Friday
+        }
+
+        public enum IndexSections
+        {
+            About,
+            Achivement,
+            Brand,
+            HeroBanner,
+            Marque,
+            News,
+            Project,
+            Service,
+            Team,
+            Testimonial,
+            WorkProcess
+        }
+
+        public static string DayOfWeekTranslate(DayOfWeek? dayOfWeek)
+        {
+            return dayOfWeek switch
+            {
+                DayOfWeek.Friday => "جمعه",
+                DayOfWeek.Sunday => "یک شنبه",
+                DayOfWeek.Monday => "دوشنبه",
+                DayOfWeek.Tuesday => "سه شنبه",
+                DayOfWeek.Wednesday => "چهارشنبه",
+                DayOfWeek.Thursday => "پنج شنبه",
+                DayOfWeek.Saturday => "شنبه",
+                _ => throw new Exception(message: "ورودی غیر قابل قبول")
+            };
         }
 
     }
