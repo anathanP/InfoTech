@@ -17,6 +17,8 @@ namespace InfoTech.Models
         public string? Title { get; set; }
 
         public Language? Language { get; set; }
+        public Brand? Brand { get; set; }
+        public HeroBanner? HeroBanner { get; set; }
 
     }
 }

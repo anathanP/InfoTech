@@ -4,6 +4,7 @@ using InfoTech.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoTech.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241105152121_CreateAndSeedBrandsTableInDatabase")]
+    partial class CreateAndSeedBrandsTableInDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -607,12 +610,6 @@ namespace InfoTech.DataAccess.Migrations
                             IndexSections = 0,
                             Tag = "درباره اینفوتک",
                             Title = "بزرگترین شرکت تکنولوژی ایران"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            IndexSections = 2,
-                            Title = "برند های که به ما اعتماد کرده اند"
                         });
                 });
 

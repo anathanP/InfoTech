@@ -16,6 +16,20 @@ namespace InfoTech.DataAccess.EntityConfiguration
                 .OnDelete(deleteBehavior: DeleteBehavior.NoAction);
 
             builder
+                .HasOne(i => i.HeroBanner)
+                .WithOne(h => h.Image)
+                .HasForeignKey<HeroBanner>(h => h.ImageId)
+                .IsRequired()
+                .OnDelete(deleteBehavior: DeleteBehavior.Cascade);
+
+            builder
+                .HasOne(i => i.Brand)
+                .WithOne(b => b.Image)
+                .HasForeignKey<Brand>(b => b.ImageId)
+                .IsRequired()
+                .OnDelete(deleteBehavior: DeleteBehavior.Cascade);
+
+            builder
                 .HasData(
                     new Image
                     {
@@ -44,6 +58,22 @@ namespace InfoTech.DataAccess.EntityConfiguration
                     new Image
                     {
                         Id = 7, Address = "about/05.png", Alt = "عکس درباره ما", Title = "عکس درباره ما"
+                    },
+                    new Image
+                    {
+                        Id = 8, Address = "brand.png", Alt = "عکس برند", Title = "عکس برند"
+                    },
+                    new Image
+                    {
+                        Id = 9, Address = "about/05.png", Alt = "عکس برند", Title = "عکس برند"
+                    },
+                    new Image
+                    {
+                        Id = 10, Address = "about/05.png", Alt = "عکس برند", Title = "عکس برند"
+                    },
+                    new Image
+                    {
+                        Id = 11, Address = "about/05.png", Alt = "عکس برند", Title = "عکس برند"
                     }
                 );
         }

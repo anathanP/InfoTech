@@ -25,6 +25,7 @@ namespace InfoTech.DataAccess.Data
         public DbSet<Section> Sections { get; set; }
         public DbSet<AboutTag> AboutTags { get; set; }
         public DbSet<Video> Videos { get; set; }
+        public DbSet<Brand> Brands { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -40,6 +41,7 @@ namespace InfoTech.DataAccess.Data
             modelBuilder.ApplyConfiguration(new SectionConfiguration());
             modelBuilder.ApplyConfiguration(new AboutTagConfiguration());
             modelBuilder.ApplyConfiguration(new VideoConfiguration());
+            modelBuilder.ApplyConfiguration(new BrandConfiguration());
         }
     }
 }

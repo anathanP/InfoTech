@@ -19,6 +19,7 @@ namespace InfoTech.DataAccess.Repositories
         public ISectionRepo Sections { get; }
         public IAboutTagRepo AboutTags { get; }
         public IVideoRepo Videos { get; }
+        public IBrandRepo Brands { get; }
 
         public UnitOfWork(AppDbContext db)
         {
@@ -36,6 +37,7 @@ namespace InfoTech.DataAccess.Repositories
             Sections = new SectionRepo(_db);
             AboutTags = new AboutTagRepo(_db);
             Videos = new VideoRepo(_db);
+            Brands = new BrandRepo(_db);
         }
         public void Save()
         {

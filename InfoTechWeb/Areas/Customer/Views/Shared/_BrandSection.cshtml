@@ -1,36 +1,21 @@
-﻿<div class="brand-section fix section-padding pt-0">
+﻿@model BrandsSectionViewModel
+
+<div class="brand-section fix section-padding pt-0">
 <div class="container">
     <div class="brand-wrapper">
         <h6 class="text-center wow fadeInUp" data-wow-delay=".3s">
-            1k + برندها به ما اعتماد کنید
+            @Model.Brands!.Count @Model.Section!.Title
         </h6>
         <div class="swiper brand-slider">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="brand-image">
-                        <img alt="brand-img" src="/img/brand.png" />
+                @foreach (var item in Model.Brands)
+                {
+                    <div class="swiper-slide">
+                        <div class="brand-image">
+                            <img alt="@item.Image!.Alt" title="@item.Image.Title" src="/img/@item.Image.Address"/>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="brand-image">
-                        <img alt="brand-img" src="/img/brand.png" />
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="brand-image">
-                        <img alt="brand-img" src="/img/brand.png" />
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="brand-image">
-                        <img alt="brand-img" src="/img/brand.png" />
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="brand-image">
-                        <img alt="brand-img" src="/img/brand.png" />
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </div>

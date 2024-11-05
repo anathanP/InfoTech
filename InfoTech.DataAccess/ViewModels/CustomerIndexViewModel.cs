@@ -9,6 +9,7 @@ namespace InfoTech.DataAccess.ViewModels
     {
         public List<HeroBanner> HeroBanners { get; set; }
         public AboutSectionViewModel AboutSectionViewModel { get; set; }
+        public BrandsSectionViewModel BrandsSectionViewModel { get; set; }
         public CustomerIndexViewModel(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
             HeroBanners = unitOfWork.HeroBanners.GetAllLazyLoad(h => h.Image!).ToList();
@@ -20,6 +21,11 @@ namespace InfoTech.DataAccess.ViewModels
                 ClientCount = 123,
                 Image = unitOfWork.Images.GetById(7),
                 Video = unitOfWork.Videos.GetById(1)
+            };
+            BrandsSectionViewModel = new BrandsSectionViewModel
+            {
+                Brands = unitOfWork.Brands.GetAllLazyLoad(b => b.Image!).ToList(),
+                Section = unitOfWork.Sections.Get(s => s.IndexSections == Sd.IndexSections.Brand)
             };
         }
     }

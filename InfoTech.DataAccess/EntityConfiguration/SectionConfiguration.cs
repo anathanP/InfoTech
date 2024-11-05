@@ -16,6 +16,12 @@ namespace InfoTech.DataAccess.EntityConfiguration
                     Description = "ما در این موسسه افتخار این را داریم که بگوییم بهترین هستیم و همیشه حق با مشتری است",
                     IndexSections = Sd.IndexSections.About, FillButtonCaption = "درباره ما",
                     FillButtonAction = "/Customer/Home/About"
+                },
+                new Section
+                {
+                    Id = 2,
+                    Title = "برند های که به ما اعتماد کرده اند",
+                    IndexSections = Sd.IndexSections.Brand
                 }
             );
         }
