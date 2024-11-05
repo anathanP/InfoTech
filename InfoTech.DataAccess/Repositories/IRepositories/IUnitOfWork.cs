@@ -11,6 +11,7 @@
         ISubPageRepo SubPages { get; }
         IAddressRepo Addresses { get; }
         IWorkTimeRepo WorkTimes { get; }
+        IHeroBannerRepo HeroBanners { get; }
 
         void Save();
     }

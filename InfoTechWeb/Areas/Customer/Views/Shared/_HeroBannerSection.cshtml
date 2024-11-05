@@ -1,157 +1,63 @@
-﻿<section class="hero-section fix hero-3">
+﻿@model List<HeroBanner>
+
+<section class="hero-section fix hero-3">
     <div class="bottom-shape">
         <img alt="shape-img" src="/img/hero/bottom-shape.png" />
     </div>
     <partial name="_ArrayButton" />
     <div class="swiper hero-slider">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="slider-image bg-cover" style="background-image: url('/img/hero/hero-2.jpg');">
-                    <div class="mask-shape" data-animation="slideInDown" data-delay="2s" data-duration="3s">
-                        <img alt="shape-img" src="/img/hero/mask-shape-2.png" />
+
+            @foreach (var banner in Model)
+            {
+                <div class="swiper-slide">
+                    <div class="slider-image bg-cover" title="@banner.Image.Title" style="background-image: url('/img/@banner.Image.Address');">
+                        <div class="mask-shape" data-animation="slideInDown" data-delay="2s" data-duration="3s">
+                            <img alt="shape-img" src="/img/hero/mask-shape-2.png" />
+                        </div>
+                        <div class="border-shape" data-animation="slideInLeft" data-delay="2.2s" data-duration="3s">
+                            <img alt="shape-img" src="/img/hero/border-shape.png" />
+                        </div>
+                        <div class="circle-shape" data-animation="slideInLeft" data-delay="2.1s" data-duration="3s">
+                            <img alt="shape-img" src="/img/choose/circle.png" />
+                        </div>
+                        <div class="frame" data-animation="slideInRight" data-delay="2.2s" data-duration="3s">
+                            <img alt="shape-img" src="/img/frame.png" />
+                        </div>
                     </div>
-                    <div class="border-shape" data-animation="slideInLeft" data-delay="2.2s" data-duration="3s">
-                        <img alt="shape-img" src="/img/hero/border-shape.png" />
-                    </div>
-                    <div class="circle-shape" data-animation="slideInLeft" data-delay="2.1s" data-duration="3s">
-                        <img alt="shape-img" src="/img/choose/circle.png" />
-                    </div>
-                    <div class="frame" data-animation="slideInRight" data-delay="2.2s" data-duration="3s">
-                        <img alt="shape-img" src="/img/frame.png" />
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-lg-8">
-                            <div class="hero-content">
-                                <h5 data-animation="slideInLeft" data-delay=".3s" data-duration="2s">
-                                    بهترین شرکت
-                                </h5>
-                                <h1 data-animation="slideInLeft" data-delay=".5s" data-duration="2s">
-                                    کسب و کار ما را دریافت کنید
-                                    <br />
-                                    این راه حل
-                                </h1>
-                                <p data-animation="slideInLeft" data-delay=".9s" data-duration="2s">
-                                    آموزش شکلات برنزی و ارتقای عمر محصول را به دنبال خواهد داشت
-                                    <br />
-                                    همه می خواهند تکالیف خود را در دوره انجام دهند، اما اعضای مدرسه به آن نیاز دارند.
-                                </p>
-                                <div class="hero-button">
-                                    <a class="theme-btn hover-white" data-animation="slideInLeft" data-delay=".9s" data-duration="2s" href="about.html">
-                                        بیشتر کاوش کنید
-                                        <i class="fa-solid fa-arrow-left-long">
-                                        </i>
-                                    </a>
-                                    <a class="theme-btn border-white" data-animation="slideInLeft" data-delay=".9s" data-duration="2s" href="contact.html">
-                                        با ما تماس بگیرید
-                                        <i class="fa-solid fa-arrow-left-long">
-                                        </i>
-                                    </a>
+                    <div class="container">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-lg-8">
+                                <div class="hero-content">
+                                    <h5 data-animation="slideInLeft" data-delay=".3s" data-duration="2s">
+                                        @banner.Tag
+                                    </h5>
+                                    <h1 data-animation="slideInLeft" data-delay=".5s" data-duration="2s">
+                                        @Html.Raw(banner.Title)
+                                    </h1>
+                                    <p data-animation="slideInLeft" data-delay=".9s" data-duration="2s">
+                                        @Html.Raw(banner.Description)
+                                    </p>
+                                    <div class="hero-button">
+                                        <a class="theme-btn hover-white" data-animation="slideInLeft" data-delay=".9s" data-duration="2s" href="about.html">
+                                            @banner.EmptyButtonCaption
+                                            <i class="fa-solid fa-arrow-left-long">
+                                            </i>
+                                        </a>
+                                        <a class="theme-btn border-white" data-animation="slideInLeft" data-delay=".9s" data-duration="2s" href="contact.html">
+                                            @banner.FillButtonCaption
+                                            <i class="fa-solid fa-arrow-left-long">
+                                            </i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="slider-image bg-cover" style="background-image: url('/img/hero/hero-1.jpg');">
-                    <div class="mask-shape" data-animation="slideInDown" data-delay="2s" data-duration="3s">
-                        <img alt="shape-img" src="/img/hero/mask-shape-2.png" />
-                    </div>
-                    <div class="border-shape" data-animation="slideInLeft" data-delay="2.2s" data-duration="3s">
-                        <img alt="shape-img" src="/img/hero/border-shape.png" />
-                    </div>
-                    <div class="circle-shape" data-animation="slideInLeft" data-delay="2.1s" data-duration="3s">
-                        <img alt="shape-img" src="/img/choose/circle.png" />
-                    </div>
-                    <div class="frame" data-animation="slideInRight" data-delay="2.2s" data-duration="3s">
-                        <img alt="shape-img" src="/img/frame.png" />
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-lg-8">
-                            <div class="hero-content">
-                                <h5 data-animation="slideInLeft" data-delay=".3s" data-duration="2s">
-                                    بهترین شرکت
-                                </h5>
-                                <h1 data-animation="slideInLeft" data-delay=".5s" data-duration="2s">
-                                    کسب و کار ما را دریافت کنید
-                                    <br />
-                                    این راه حل
-                                </h1>
-                                <p data-animation="slideInLeft" data-delay=".9s" data-duration="2s">
-                                    آموزش شکلات برنزی و ارتقای عمر محصول را به دنبال خواهد داشت
-                                    <br />
-                                    همه می خواهند تکالیف خود را در دوره انجام دهند، اما اعضای مدرسه به آن نیاز دارند.
-                                </p>
-                                <div class="hero-button">
-                                    <a class="theme-btn hover-white" data-animation="slideInLeft" data-delay=".9s" data-duration="2s" href="about.html">
-                                        بیشتر کاوش کنید
-                                        <i class="fa-solid fa-arrow-left-long">
-                                        </i>
-                                    </a>
-                                    <a class="theme-btn border-white" data-animation="slideInLeft" data-delay=".9s" data-duration="2s" href="contact.html">
-                                        با ما تماس بگیرید
-                                        <i class="fa-solid fa-arrow-left-long">
-                                        </i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="slider-image bg-cover" style="background-image: url('/img/hero/hero-3.jpg');">
-                    <div class="mask-shape" data-animation="slideInDown" data-delay="2s" data-duration="3s">
-                        <img alt="shape-img" src="/img/hero/mask-shape-2.png" />
-                    </div>
-                    <div class="border-shape" data-animation="slideInLeft" data-delay="2.2s" data-duration="3s">
-                        <img alt="shape-img" src="/img/hero/border-shape.png" />
-                    </div>
-                    <div class="circle-shape" data-animation="slideInLeft" data-delay="2.1s" data-duration="3s">
-                        <img alt="shape-img" src="/img/choose/circle.png" />
-                    </div>
-                    <div class="frame" data-animation="slideInRight" data-delay="2.2s" data-duration="3s">
-                        <img alt="shape-img" src="/img/frame.png" />
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-lg-8">
-                            <div class="hero-content">
-                                <h5 data-animation="slideInLeft" data-delay=".3s" data-duration="2s">
-                                    بهترین شرکت
-                                </h5>
-                                <h1 data-animation="slideInLeft" data-delay=".5s" data-duration="2s">
-                                    کسب و کار ما را دریافت کنید
-                                    <br />
-                                    این راه حل
-                                </h1>
-                                <p data-animation="slideInLeft" data-delay=".9s" data-duration="2s">
-                                    آموزش شکلات برنزی و ارتقای عمر محصول را به دنبال خواهد داشت
-                                    <br />
-                                    همه می خواهند تکالیف خود را در دوره انجام دهند، اما اعضای مدرسه به آن نیاز دارند.
-                                </p>
-                                <div class="hero-button">
-                                    <a class="theme-btn hover-white" data-animation="slideInLeft" data-delay=".9s" data-duration="2s" href="about.html">
-                                        بیشتر کاوش کنید
-                                        <i class="fa-solid fa-arrow-left-long">
-                                        </i>
-                                    </a>
-                                    <a class="theme-btn border-white" data-animation="slideInLeft" data-delay=".9s" data-duration="2s" href="contact.html">
-                                        با ما تماس بگیرید
-                                        <i class="fa-solid fa-arrow-left-long">
-                                        </i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            }
+
+
         </div>
     </div>
 </section>

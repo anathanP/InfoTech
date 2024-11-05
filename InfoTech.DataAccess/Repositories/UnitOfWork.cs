@@ -15,6 +15,7 @@ namespace InfoTech.DataAccess.Repositories
         public ISubPageRepo SubPages { get; }
         public IAddressRepo Addresses { get; }
         public IWorkTimeRepo WorkTimes { get; }
+        public IHeroBannerRepo HeroBanners { get; }
 
         public UnitOfWork(AppDbContext db)
         {
@@ -28,6 +29,7 @@ namespace InfoTech.DataAccess.Repositories
             SubPages = new SubPageRepo(_db);
             Addresses = new AddressRepo(_db);
             WorkTimes = new WorkTimeRepo(_db);
+            HeroBanners = new HeroBannerRepo(_db);
         }
         public void Save()
         {
