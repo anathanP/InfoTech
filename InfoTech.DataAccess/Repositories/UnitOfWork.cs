@@ -17,6 +17,7 @@ namespace InfoTech.DataAccess.Repositories
         public IWorkTimeRepo WorkTimes { get; }
         public IHeroBannerRepo HeroBanners { get; }
         public ISectionRepo Sections { get; }
+        public IAboutTagRepo AboutTags { get; }
 
         public UnitOfWork(AppDbContext db)
         {
@@ -32,6 +33,7 @@ namespace InfoTech.DataAccess.Repositories
             WorkTimes = new WorkTimeRepo(_db);
             HeroBanners = new HeroBannerRepo(_db);
             Sections = new SectionRepo(_db);
+            AboutTags = new AboutTagRepo(_db);
         }
         public void Save()
         {

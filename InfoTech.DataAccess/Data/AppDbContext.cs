@@ -23,6 +23,7 @@ namespace InfoTech.DataAccess.Data
         public DbSet<WorkTime> WorkTimes { get; set; }
         public DbSet<HeroBanner> HeroBanners { get; set; }
         public DbSet<Section> Sections { get; set; }
+        public DbSet<AboutTag> AboutTags { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -36,6 +37,7 @@ namespace InfoTech.DataAccess.Data
             modelBuilder.ApplyConfiguration(new WorkTimeConfiguration());
             modelBuilder.ApplyConfiguration(new HeroBannerConfiguration());
             modelBuilder.ApplyConfiguration(new SectionConfiguration());
+            modelBuilder.ApplyConfiguration(new AboutTagConfiguration());
         }
     }
 }
