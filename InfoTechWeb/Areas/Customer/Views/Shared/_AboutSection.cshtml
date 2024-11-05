@@ -12,9 +12,9 @@
                         <div class="circle-shape">
                             <img alt="shape-img" src="/img/about/circle.png" />
                         </div>
-                        <img alt="about-img" src="/img/about/05.png" />
+                        <img alt="@Model.Image!.Alt" title="@Model.Image.Title" src="/img/@Model.Image.Address" />
                         <div class="video-box">
-                            <a class="video-btn ripple video-popup" href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I">
+                            <a class="video-btn ripple video-popup" href="@Model.Video!.Link" title="@Model.Video.Title">
                                 <i class="fa-solid fa-play">
                                 </i>
                             </a>
@@ -84,7 +84,7 @@
                                         اکنون با ما تماس بگیرید
                                     </span>
                                     <h5>
-                                        <a href="tel:@Model.Phone.Number">
+                                        <a href="tel:@Model.Phone!.Number">
                                             @Model.Phone.Number
                                         </a>
                                     </h5>

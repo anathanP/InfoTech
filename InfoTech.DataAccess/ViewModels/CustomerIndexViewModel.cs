@@ -17,7 +17,9 @@ namespace InfoTech.DataAccess.ViewModels
                 AboutTags = unitOfWork.AboutTags.GetAll().ToList(),
                 Phone = unitOfWork.Phones.GetById(1),
                 Section = unitOfWork.Sections.Get(s => s.IndexSections == Sd.IndexSections.About),
-                ClientCount = 123
+                ClientCount = 123,
+                Image = unitOfWork.Images.GetById(7),
+                Video = unitOfWork.Videos.GetById(1)
             };
         }
     }

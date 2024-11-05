@@ -4,6 +4,7 @@ using InfoTech.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoTech.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241105145842_CreateAndSeedVideosTableInDatabase")]
+    partial class CreateAndSeedVideosTableInDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -285,13 +288,6 @@ namespace InfoTech.DataAccess.Migrations
                             Address = "hero/hero-3.jpg",
                             Alt = "عکس بنر",
                             Title = "عکس بنر"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Address = "about/05.png",
-                            Alt = "عکس درباره ما",
-                            Title = "عکس درباره ما"
                         });
                 });
 

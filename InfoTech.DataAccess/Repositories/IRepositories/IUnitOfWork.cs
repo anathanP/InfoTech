@@ -14,6 +14,7 @@
         IHeroBannerRepo HeroBanners { get; }
         ISectionRepo Sections { get; }
         IAboutTagRepo AboutTags { get; }
+        IVideoRepo Videos { get; }
         void Save();
     }
 }

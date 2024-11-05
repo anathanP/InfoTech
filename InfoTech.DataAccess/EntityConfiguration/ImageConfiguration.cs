@@ -40,6 +40,10 @@ namespace InfoTech.DataAccess.EntityConfiguration
                     new Image
                     {
                         Id = 6, Address = "hero/hero-3.jpg", Alt = "عکس بنر", Title = "عکس بنر"
+                    },
+                    new Image
+                    {
+                        Id = 7, Address = "about/05.png", Alt = "عکس درباره ما", Title = "عکس درباره ما"
                     }
                 );
         }

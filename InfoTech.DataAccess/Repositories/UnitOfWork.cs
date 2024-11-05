@@ -18,6 +18,7 @@ namespace InfoTech.DataAccess.Repositories
         public IHeroBannerRepo HeroBanners { get; }
         public ISectionRepo Sections { get; }
         public IAboutTagRepo AboutTags { get; }
+        public IVideoRepo Videos { get; }
 
         public UnitOfWork(AppDbContext db)
         {
@@ -34,6 +35,7 @@ namespace InfoTech.DataAccess.Repositories
             HeroBanners = new HeroBannerRepo(_db);
             Sections = new SectionRepo(_db);
             AboutTags = new AboutTagRepo(_db);
+            Videos = new VideoRepo(_db);
         }
         public void Save()
         {

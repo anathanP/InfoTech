@@ -24,6 +24,7 @@ namespace InfoTech.DataAccess.Data
         public DbSet<HeroBanner> HeroBanners { get; set; }
         public DbSet<Section> Sections { get; set; }
         public DbSet<AboutTag> AboutTags { get; set; }
+        public DbSet<Video> Videos { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -38,6 +39,7 @@ namespace InfoTech.DataAccess.Data
             modelBuilder.ApplyConfiguration(new HeroBannerConfiguration());
             modelBuilder.ApplyConfiguration(new SectionConfiguration());
             modelBuilder.ApplyConfiguration(new AboutTagConfiguration());
+            modelBuilder.ApplyConfiguration(new VideoConfiguration());
         }
     }
 }
