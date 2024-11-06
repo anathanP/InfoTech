@@ -4,6 +4,7 @@ using InfoTech.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoTech.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241106143922_SeedWorkProcessesTableInDatabase")]
+    partial class SeedWorkProcessesTableInDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -417,28 +420,28 @@ namespace InfoTech.DataAccess.Migrations
                         new
                         {
                             Id = 18,
-                            Address = "process/01.svg",
+                            Address = "process/01.png",
                             Alt = "عکس پروسه",
                             Title = "عکس پروسه"
                         },
                         new
                         {
                             Id = 19,
-                            Address = "process/02.svg",
+                            Address = "process/02.png",
                             Alt = "عکس پروسه",
                             Title = "عکس پروسه"
                         },
                         new
                         {
                             Id = 20,
-                            Address = "process/03.svg",
+                            Address = "process/03.png",
                             Alt = "عکس پروسه",
                             Title = "عکس پروسه"
                         },
                         new
                         {
                             Id = 21,
-                            Address = "process/04.svg",
+                            Address = "process/04.png",
                             Alt = "عکس پروسه",
                             Title = "عکس پروسه"
                         });

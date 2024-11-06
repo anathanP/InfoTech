@@ -21,6 +21,7 @@ namespace InfoTech.DataAccess.Repositories
         public IVideoRepo Videos { get; }
         public IBrandRepo Brands { get; }
         public IServiceRepo Services { get; }
+        public IWorkProcessRepo WorkProcess { get; }
 
         public UnitOfWork(AppDbContext db)
         {
@@ -40,6 +41,7 @@ namespace InfoTech.DataAccess.Repositories
             Videos = new VideoRepo(_db);
             Brands = new BrandRepo(_db);
             Services = new ServiceRepo(_db);
+            WorkProcess = new WorkProcessRepo(_db);
         }
         public void Save()
         {

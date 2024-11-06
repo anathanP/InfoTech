@@ -4,6 +4,7 @@ using InfoTech.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoTech.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241106140640_CreateAndSeedWorkProcessesTableInDatabase")]
+    partial class CreateAndSeedWorkProcessesTableInDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -411,34 +414,6 @@ namespace InfoTech.DataAccess.Migrations
                         {
                             Id = 17,
                             Address = "process/linepng.png",
-                            Alt = "عکس پروسه",
-                            Title = "عکس پروسه"
-                        },
-                        new
-                        {
-                            Id = 18,
-                            Address = "process/01.svg",
-                            Alt = "عکس پروسه",
-                            Title = "عکس پروسه"
-                        },
-                        new
-                        {
-                            Id = 19,
-                            Address = "process/02.svg",
-                            Alt = "عکس پروسه",
-                            Title = "عکس پروسه"
-                        },
-                        new
-                        {
-                            Id = 20,
-                            Address = "process/03.svg",
-                            Alt = "عکس پروسه",
-                            Title = "عکس پروسه"
-                        },
-                        new
-                        {
-                            Id = 21,
-                            Address = "process/04.svg",
                             Alt = "عکس پروسه",
                             Title = "عکس پروسه"
                         });
@@ -923,9 +898,6 @@ namespace InfoTech.DataAccess.Migrations
                     b.Property<byte>("DisplayOrder")
                         .HasColumnType("tinyint");
 
-                    b.Property<int>("ImageId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Step")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -933,43 +905,7 @@ namespace InfoTech.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ImageId");
-
                     b.ToTable("WorkProcesses");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "در یک ساعت آزاد، زمانی که قدرت انتخاب ما بی بند و بار است و",
-                            DisplayOrder = (byte)1,
-                            ImageId = 18,
-                            Step = "یک سرویس را انتخاب کنید"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "در یک ساعت آزاد، زمانی که قدرت انتخاب ما بی بند و بار است و",
-                            DisplayOrder = (byte)2,
-                            ImageId = 19,
-                            Step = "الزامات را تعریف کنید"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "در یک ساعت آزاد، زمانی که قدرت انتخاب ما بی بند و بار است و",
-                            DisplayOrder = (byte)3,
-                            ImageId = 20,
-                            Step = "درخواست یک جلسه"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Description = "در یک ساعت آزاد، زمانی که قدرت انتخاب ما بی بند و بار است و",
-                            DisplayOrder = (byte)4,
-                            ImageId = 21,
-                            Step = "راه حل نهایی 3"
-                        });
                 });
 
             modelBuilder.Entity("InfoTech.Models.WorkTime", b =>
@@ -1067,17 +1003,6 @@ namespace InfoTech.DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("Page");
-                });
-
-            modelBuilder.Entity("InfoTech.Models.WorkProcess", b =>
-                {
-                    b.HasOne("InfoTech.Models.Image", "Image")
-                        .WithMany()
-                        .HasForeignKey("ImageId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Image");
                 });
 
             modelBuilder.Entity("InfoTech.Models.Image", b =>

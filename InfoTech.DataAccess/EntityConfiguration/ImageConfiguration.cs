@@ -101,6 +101,26 @@ namespace InfoTech.DataAccess.EntityConfiguration
                     new Image
                     {
                         Id = 16, Address = "service/05.jpg", Alt = "عکس سرویس", Title = "عکس سرویس"
+                    },
+                    new Image
+                    {
+                        Id = 17, Address = "process/linepng.png", Alt = "عکس پروسه", Title = "عکس پروسه"
+                    },
+                    new Image
+                    {
+                        Id = 18, Address = "process/01.png", Alt = "عکس پروسه", Title = "عکس پروسه"
+                    },
+                    new Image
+                    {
+                        Id = 19, Address = "process/02.png", Alt = "عکس پروسه", Title = "عکس پروسه"
+                    },
+                    new Image
+                    {
+                        Id = 20, Address = "process/03.png", Alt = "عکس پروسه", Title = "عکس پروسه"
+                    },
+                    new Image
+                    {
+                        Id = 21, Address = "process/04.png", Alt = "عکس پروسه", Title = "عکس پروسه"
                     }
                 );
         }

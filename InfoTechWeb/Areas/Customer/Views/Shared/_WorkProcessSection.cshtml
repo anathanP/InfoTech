@@ -1,90 +1,66 @@
-﻿<section class="work-process-section fix section-padding pt-0">
+﻿@model WorkProcessViewModel
+
+<section class="work-process-section fix section-padding pt-4">
     <div class="container">
         <div class="section-title text-center">
             <span>
-                چطور کار میکند
+                @Model.Section!.Tag
             </span>
             <h2>
-                فرآیند کار استاندارد
+                @Html.Raw(Model.Section.Title)
             </h2>
         </div>
         <div class="process-work-wrapper">
             <div class="line-shape">
-                <img alt="" src="/img/process/linepng.png" />
+                <img alt="@Model.Image!.Alt" src="/img/@Model.Image.Address" title="@Model.Image.Title"/>
             </div>
             <div class="row">
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="work-process-items text-center">
-                        <div class="icon">
-                            <img alt="img" src="/img/process/01.svg" />
-                            <h6 class="number">
-                                1
-                            </h6>
+                @foreach (var process in Model.WorkProcesses!.OrderBy(w => w.DisplayOrder))
+                {
+                    if (process.DisplayOrder % 2 == 0)
+                    {
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="work-process-items text-center">
+                                <div class="content style-2">
+                                    <h4>
+                                        @Html.Raw(process.Step)
+                                    </h4>
+                                    <p>
+                                        @Html.Raw(process.Description)
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <img alt="@process.Image!.Alt" title="@process.Image.Title" src="/img/@process.Image.Address"/>
+                                    <h6 class="number">
+                                        @process.DisplayOrder
+                                    </h6>
+                                </div>
+                            </div>
                         </div>
-                        <div class="content">
-                            <h4>
-                                یک سرویس را انتخاب کنید
-                            </h4>
-                            <p>
-                                در یک ساعت آزاد، زمانی که قدرت انتخاب ما بی بند و بار است و
-                            </p>
+                    }
+                    else
+                    {
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="work-process-items text-center">
+                                <div class="icon">
+                                    <img alt="@process.Image!.Alt" title="@process.Image.Title" src="/img/@process.Image.Address" />
+                                    <h6 class="number">
+                                        @process.DisplayOrder
+                                    </h6>
+                                </div>
+                                <div class="content">
+                                    <h4>
+                                        @Html.Raw(process.Step)
+                                    </h4>
+                                    <p>
+                                        @Html.Raw(process.Description)
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="work-process-items text-center">
-                        <div class="content style-2">
-                            <h4>
-                                الزامات را تعریف کنید
-                            </h4>
-                            <p>
-                                در یک ساعت آزاد، زمانی که قدرت انتخاب ما بی بند و بار است و
-                            </p>
-                        </div>
-                        <div class="icon">
-                            <img alt="img" src="/img/process/02.svg" />
-                            <h6 class="number">
-                                2
-                            </h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="work-process-items text-center">
-                        <div class="icon">
-                            <img alt="img" src="/img/process/03.svg" />
-                            <h6 class="number">
-                                3
-                            </h6>
-                        </div>
-                        <div class="content">
-                            <h4>
-                                درخواست یک جلسه
-                            </h4>
-                            <p>
-                                در یک ساعت آزاد، زمانی که قدرت انتخاب ما بی بند و بار است و
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="work-process-items text-center">
-                        <div class="content style-2">
-                            <h4>
-                                راه حل نهایی 3
-                            </h4>
-                            <p>
-                                در یک ساعت آزاد، زمانی که قدرت انتخاب ما بی بند و بار است و
-                            </p>
-                        </div>
-                        <div class="icon">
-                            <img alt="img" src="/img/process/04.svg" />
-                            <h6 class="number">
-                                4
-                            </h6>
-                        </div>
-                    </div>
-                </div>
+                    }
+                    
+                }
             </div>
         </div>
     </div>

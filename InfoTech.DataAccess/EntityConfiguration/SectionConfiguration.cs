@@ -31,6 +31,13 @@ namespace InfoTech.DataAccess.EntityConfiguration
                     IndexSections = Sd.IndexSections.Service,
                     FillButtonCaption = "سرویس ما",
                     FillButtonAction = "/Customer/Home/Service"
+                },
+                new Section
+                {
+                    Id = 4,
+                    Title = "پروسه کاری این شرکت",
+                    Tag = "نحوه کار",
+                    IndexSections = Sd.IndexSections.WorkProcess,
                 }
             );
         }

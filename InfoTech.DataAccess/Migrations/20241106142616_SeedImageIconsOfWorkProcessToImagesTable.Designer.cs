@@ -4,6 +4,7 @@ using InfoTech.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoTech.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241106142616_SeedImageIconsOfWorkProcessToImagesTable")]
+    partial class SeedImageIconsOfWorkProcessToImagesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -417,28 +420,28 @@ namespace InfoTech.DataAccess.Migrations
                         new
                         {
                             Id = 18,
-                            Address = "process/01.svg",
+                            Address = "process/01.png",
                             Alt = "عکس پروسه",
                             Title = "عکس پروسه"
                         },
                         new
                         {
                             Id = 19,
-                            Address = "process/02.svg",
+                            Address = "process/02.png",
                             Alt = "عکس پروسه",
                             Title = "عکس پروسه"
                         },
                         new
                         {
                             Id = 20,
-                            Address = "process/03.svg",
+                            Address = "process/03.png",
                             Alt = "عکس پروسه",
                             Title = "عکس پروسه"
                         },
                         new
                         {
                             Id = 21,
-                            Address = "process/04.svg",
+                            Address = "process/04.png",
                             Alt = "عکس پروسه",
                             Title = "عکس پروسه"
                         });
@@ -936,40 +939,6 @@ namespace InfoTech.DataAccess.Migrations
                     b.HasIndex("ImageId");
 
                     b.ToTable("WorkProcesses");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "در یک ساعت آزاد، زمانی که قدرت انتخاب ما بی بند و بار است و",
-                            DisplayOrder = (byte)1,
-                            ImageId = 18,
-                            Step = "یک سرویس را انتخاب کنید"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "در یک ساعت آزاد، زمانی که قدرت انتخاب ما بی بند و بار است و",
-                            DisplayOrder = (byte)2,
-                            ImageId = 19,
-                            Step = "الزامات را تعریف کنید"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "در یک ساعت آزاد، زمانی که قدرت انتخاب ما بی بند و بار است و",
-                            DisplayOrder = (byte)3,
-                            ImageId = 20,
-                            Step = "درخواست یک جلسه"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Description = "در یک ساعت آزاد، زمانی که قدرت انتخاب ما بی بند و بار است و",
-                            DisplayOrder = (byte)4,
-                            ImageId = 21,
-                            Step = "راه حل نهایی 3"
-                        });
                 });
 
             modelBuilder.Entity("InfoTech.Models.WorkTime", b =>

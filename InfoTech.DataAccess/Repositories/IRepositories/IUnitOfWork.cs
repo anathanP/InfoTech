@@ -17,6 +17,7 @@
         IVideoRepo Videos { get; }
         IBrandRepo Brands { get; }
         IServiceRepo Services { get; }
+        IWorkProcessRepo WorkProcess { get; }
         void Save();
     }
 }
