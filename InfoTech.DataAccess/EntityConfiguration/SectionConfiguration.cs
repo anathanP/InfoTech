@@ -22,6 +22,15 @@ namespace InfoTech.DataAccess.EntityConfiguration
                     Id = 2,
                     Title = "برند های که به ما اعتماد کرده اند",
                     IndexSections = Sd.IndexSections.Brand
+                },
+                new Section
+                {
+                    Id = 3,
+                    Title = "فعالیت های ما در این شرکت",
+                    Tag = "سرویس ها",
+                    IndexSections = Sd.IndexSections.Service,
+                    FillButtonCaption = "سرویس ما",
+                    FillButtonAction = "/Customer/Home/Service"
                 }
             );
         }

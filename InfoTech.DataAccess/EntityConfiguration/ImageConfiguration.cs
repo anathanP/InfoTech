@@ -30,6 +30,13 @@ namespace InfoTech.DataAccess.EntityConfiguration
                 .OnDelete(deleteBehavior: DeleteBehavior.Cascade);
 
             builder
+                .HasOne(i => i.Service)
+                .WithOne(s => s.Image)
+                .HasForeignKey<Service>(s => s.ImageId)
+                .IsRequired()
+                .OnDelete(deleteBehavior: DeleteBehavior.Cascade);
+
+            builder
                 .HasData(
                     new Image
                     {
@@ -74,6 +81,26 @@ namespace InfoTech.DataAccess.EntityConfiguration
                     new Image
                     {
                         Id = 11, Address = "brand.png", Alt = "عکس برند", Title = "عکس برند"
+                    },
+                    new Image
+                    {
+                        Id = 12, Address = "service/01.jpg", Alt = "عکس سرویس", Title = "عکس سرویس"
+                    },
+                    new Image
+                    {
+                        Id = 13, Address = "service/02.jpg", Alt = "عکس سرویس", Title = "عکس سرویس"
+                    },
+                    new Image
+                    {
+                        Id = 14, Address = "service/03.jpg", Alt = "عکس سرویس", Title = "عکس سرویس"
+                    },
+                    new Image
+                    {
+                        Id = 15, Address = "service/04.jpg", Alt = "عکس سرویس", Title = "عکس سرویس"
+                    },
+                    new Image
+                    {
+                        Id = 16, Address = "service/05.jpg", Alt = "عکس سرویس", Title = "عکس سرویس"
                     }
                 );
         }

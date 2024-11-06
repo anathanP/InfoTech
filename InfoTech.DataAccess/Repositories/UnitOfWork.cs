@@ -20,6 +20,7 @@ namespace InfoTech.DataAccess.Repositories
         public IAboutTagRepo AboutTags { get; }
         public IVideoRepo Videos { get; }
         public IBrandRepo Brands { get; }
+        public IServiceRepo Services { get; }
 
         public UnitOfWork(AppDbContext db)
         {
@@ -38,6 +39,7 @@ namespace InfoTech.DataAccess.Repositories
             AboutTags = new AboutTagRepo(_db);
             Videos = new VideoRepo(_db);
             Brands = new BrandRepo(_db);
+            Services = new ServiceRepo(_db);
         }
         public void Save()
         {

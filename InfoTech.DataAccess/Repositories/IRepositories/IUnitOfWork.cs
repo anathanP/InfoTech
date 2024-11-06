@@ -16,6 +16,7 @@
         IAboutTagRepo AboutTags { get; }
         IVideoRepo Videos { get; }
         IBrandRepo Brands { get; }
+        IServiceRepo Services { get; }
         void Save();
     }
 }
