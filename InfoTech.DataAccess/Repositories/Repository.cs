@@ -62,5 +62,16 @@ namespace InfoTech.DataAccess.Repositories
             children.ToList().ForEach(x=>_dbSet.Include(x).Load());
             return _dbSet;
         }
+
+        public IQueryable<T> FindBy(params string[] include)
+        {
+            IQueryable<T> query = _dbSet;
+            foreach (var parameter in include)
+            {
+                query = query.Include(parameter);
+            }
+            return query;
+        }
+
     }
 }

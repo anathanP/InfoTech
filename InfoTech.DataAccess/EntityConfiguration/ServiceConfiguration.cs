@@ -8,6 +8,14 @@ namespace InfoTech.DataAccess.EntityConfiguration
     {
         public void Configure(EntityTypeBuilder<Service> builder)
         {
+
+            builder
+                .HasMany(s => s.Projects)
+                .WithOne(p => p.Service)
+                .HasForeignKey(p => p.ServiceId)
+                .IsRequired()
+                .OnDelete(deleteBehavior: DeleteBehavior.NoAction);
+
             builder
                 .HasData(
                     new Service

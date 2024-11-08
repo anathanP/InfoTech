@@ -38,6 +38,13 @@ namespace InfoTech.DataAccess.EntityConfiguration
                     Title = "پروسه کاری این شرکت",
                     Tag = "نحوه کار",
                     IndexSections = Sd.IndexSections.WorkProcess,
+                },
+                new Section
+                {
+                    Id = 5,
+                    Title = "پروژه های انجام شده در این شرکت",
+                    Tag = "پروژه ها",
+                    IndexSections = Sd.IndexSections.Project,
                 }
             );
         }

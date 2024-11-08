@@ -13,6 +13,7 @@ namespace InfoTech.DataAccess.Repositories.IRepositories
         void RemoveRange(IEnumerable<T> entities);
         IQueryable<T> GetAllLazyLoad(params Expression<Func<T, object>>[] children);
         IQueryable<T> GetConditionalLazyLoad(Expression <Func<T, bool>> filter, params Expression<Func<T, object>>[] children);
+        IQueryable<T> FindBy(params string[] include);
 
     }
 }

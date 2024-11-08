@@ -4,6 +4,7 @@ using InfoTech.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoTech.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241108085235_CreateAndSeedProjectsTableInDatabase")]
+    partial class CreateAndSeedProjectsTableInDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -979,13 +982,6 @@ namespace InfoTech.DataAccess.Migrations
                             IndexSections = 10,
                             Tag = "نحوه کار",
                             Title = "پروسه کاری این شرکت"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            IndexSections = 6,
-                            Tag = "پروژه ها",
-                            Title = "پروژه های انجام شده در این شرکت"
                         });
                 });
 
@@ -1191,12 +1187,6 @@ namespace InfoTech.DataAccess.Migrations
                             Id = 1,
                             Link = "https://www.youtube.com/watch?v=Cn4G2lZ_g2I",
                             Title = "َAbout Us Video"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Link = "https://www.youtube.com/watch?v=Cn4G2lZ_g2I",
-                            Title = "َProject Video"
                         });
                 });
 

@@ -37,6 +37,13 @@ namespace InfoTech.DataAccess.EntityConfiguration
                 .OnDelete(deleteBehavior: DeleteBehavior.Cascade);
 
             builder
+                .HasOne(i => i.Project)
+                .WithOne(p => p.Image)
+                .HasForeignKey<Project>(p => p.ImageId)
+                .IsRequired()
+                .OnDelete(deleteBehavior: DeleteBehavior.Cascade);
+
+            builder
                 .HasData(
                     new Image
                     {
@@ -121,6 +128,66 @@ namespace InfoTech.DataAccess.EntityConfiguration
                     new Image
                     {
                         Id = 21, Address = "process/04.png", Alt = "عکس پروسه", Title = "عکس پروسه"
+                    },
+                    new Image
+                    {
+                        Id = 22, Address = "project/01.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 23, Address = "project/02.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 24, Address = "project/03.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 25, Address = "project/04.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 26, Address = "project/05.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 27, Address = "project/06.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 28, Address = "project/07.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 29, Address = "project/08.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 30, Address = "project/09.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 31, Address = "project/10.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 32, Address = "project/11.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 33, Address = "project/12.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 34, Address = "project/13.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 35, Address = "project/14.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 36, Address = "project/15.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
                     }
                 );
         }

@@ -20,6 +20,7 @@ namespace InfoTech.Models
         public Brand? Brand { get; set; }
         public HeroBanner? HeroBanner { get; set; }
         public Service? Service { get; set; }
+        public Project? Project { get; set; }
 
     }
 }

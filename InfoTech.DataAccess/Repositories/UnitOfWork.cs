@@ -22,6 +22,7 @@ namespace InfoTech.DataAccess.Repositories
         public IBrandRepo Brands { get; }
         public IServiceRepo Services { get; }
         public IWorkProcessRepo WorkProcess { get; }
+        public IProjectRepo Projects { get; }
 
         public UnitOfWork(AppDbContext db)
         {
@@ -42,6 +43,7 @@ namespace InfoTech.DataAccess.Repositories
             Brands = new BrandRepo(_db);
             Services = new ServiceRepo(_db);
             WorkProcess = new WorkProcessRepo(_db);
+            Projects = new ProjectRepo(_db);
         }
         public void Save()
         {

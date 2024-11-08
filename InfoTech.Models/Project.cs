@@ -1,22 +1,22 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Reflection.Metadata.Ecma335;
 
 namespace InfoTech.Models
 {
-    public class Service
+    public class Project
     {
         [Key]
         public int Id { get; set; }
         [Required]
         [MaxLength(100)]
-        public string? Name { get; set; }
+        public string? Title { get; set; }
         [Required]
+        [MaxLength(200)]
         public string? Description { get; set; }
-        public Image? Image { get; set; }
-        public int ImageId { get; set; }
         [Required]
         public string? Content { get; set; }
-        public List<Project>? Projects { get; set; }
-
+        public Service? Service { get; set; }
+        public int ServiceId { get; set; }
+        public Image? Image { get; set; }
+        public int ImageId { get; set; }
     }
 }

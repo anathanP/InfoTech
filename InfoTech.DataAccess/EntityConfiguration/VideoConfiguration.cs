@@ -10,7 +10,8 @@ namespace InfoTech.DataAccess.EntityConfiguration
         {
             builder
                 .HasData(
-                    new Video { Id = 1, Title = "َAbout Us Video", Link = "https://www.youtube.com/watch?v=Cn4G2lZ_g2I" }
+                    new Video { Id = 1, Title = "َAbout Us Video", Link = "https://www.youtube.com/watch?v=Cn4G2lZ_g2I" },
+                    new Video { Id = 2, Title = "َProject Video", Link = "https://www.youtube.com/watch?v=Cn4G2lZ_g2I" }
                 );
         }
     }

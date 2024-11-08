@@ -18,6 +18,7 @@
         IBrandRepo Brands { get; }
         IServiceRepo Services { get; }
         IWorkProcessRepo WorkProcess { get; }
+        IProjectRepo Projects { get; }
         void Save();
     }
 }
