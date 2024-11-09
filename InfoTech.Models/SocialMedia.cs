@@ -13,5 +13,8 @@ namespace InfoTech.Models
         public string? Link { get; set; }
         [Required]
         public string? Icon { get; set; }
+
+        public TeamMember? TeamMember { get; set; }
+        public bool CompanyMedia { get; set; }
     }
 }

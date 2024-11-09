@@ -31,6 +31,11 @@ namespace InfoTech.DataAccess.Repositories
             return _query.ToList();
         }
 
+        public IEnumerable<T> GetAllConditional(Expression<Func<T, bool>> filter)
+        {
+            return _query.Where(filter).ToList();
+        }
+
         public IQueryable<T> Include(string filter)
         {
             return _query.Include(filter);

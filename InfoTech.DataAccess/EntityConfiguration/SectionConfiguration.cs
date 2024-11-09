@@ -45,6 +45,13 @@ namespace InfoTech.DataAccess.EntityConfiguration
                     Title = "پروژه های انجام شده در این شرکت",
                     Tag = "پروژه ها",
                     IndexSections = Sd.IndexSections.Project,
+                },
+                new Section
+                {
+                    Id = 6,
+                    Title = "اعضای تیم ما",
+                    Tag = "اعضا",
+                    IndexSections = Sd.IndexSections.Team,
                 }
             );
         }

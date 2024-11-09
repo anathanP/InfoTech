@@ -20,6 +20,7 @@
         IWorkProcessRepo WorkProcess { get; }
         IProjectRepo Projects { get; }
         IMarqueRepo Marques { get; }
+        ITeamMemberRepo TeamMembers { get; }
         void Save();
     }
 }

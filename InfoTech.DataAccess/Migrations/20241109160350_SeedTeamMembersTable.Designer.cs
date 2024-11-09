@@ -4,6 +4,7 @@ using InfoTech.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoTech.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241109160350_SeedTeamMembersTable")]
+    partial class SeedTeamMembersTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1173,13 +1176,6 @@ namespace InfoTech.DataAccess.Migrations
                             IndexSections = 6,
                             Tag = "پروژه ها",
                             Title = "پروژه های انجام شده در این شرکت"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            IndexSections = 8,
-                            Tag = "اعضا",
-                            Title = "اعضای تیم ما"
                         });
                 });
 

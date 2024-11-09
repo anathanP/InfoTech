@@ -14,6 +14,7 @@ namespace InfoTech.DataAccess.ViewModels
         public WorkProcessViewModel? WorkProcessViewModel { get; set; }
         public ProjectSectionViewModel? ProjectSectionViewModel { get; set; }
         public List<Marque> Marques { get; set; }
+        public TeamSectionViewModel? TeamSectionViewModel { get; set; }
         public CustomerIndexViewModel(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
             HeroBanners = unitOfWork.HeroBanners.GetAllLazyLoad(h => h.Image!).ToList();
@@ -52,6 +53,12 @@ namespace InfoTech.DataAccess.ViewModels
                 Video = unitOfWork.Videos.GetById(2)
             };
             Marques = unitOfWork.Marques.GetAll().ToList();
+            projectIncludes[1] = "SocialMedias";
+            TeamSectionViewModel = new TeamSectionViewModel
+            {
+                Section = unitOfWork.Sections.Get(s => s.IndexSections == Sd.IndexSections.Team),
+                TeamMembers = unitOfWork.TeamMembers.FindBy(projectIncludes).ToList()
+            };
         }
     }
 }

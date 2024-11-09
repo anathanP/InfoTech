@@ -8,6 +8,7 @@ namespace InfoTech.DataAccess.Repositories.IRepositories
         T? Get(Expression<Func<T, bool>> filter);
 
         IEnumerable<T> GetAll();
+        IEnumerable<T> GetAllConditional(Expression<Func<T, bool>> filter);
         void Add(T entity);
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entities);

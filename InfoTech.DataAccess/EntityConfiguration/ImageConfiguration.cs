@@ -44,6 +44,13 @@ namespace InfoTech.DataAccess.EntityConfiguration
                 .OnDelete(deleteBehavior: DeleteBehavior.Cascade);
 
             builder
+                .HasOne(i => i.TeamMember)
+                .WithOne(t => t.Image)
+                .HasForeignKey<TeamMember>(t => t.ImageId)
+                .IsRequired()
+                .OnDelete(deleteBehavior: DeleteBehavior.Cascade);
+
+            builder
                 .HasData(
                     new Image
                     {
@@ -188,6 +195,58 @@ namespace InfoTech.DataAccess.EntityConfiguration
                     new Image
                     {
                         Id = 36, Address = "project/15.jpg", Alt = "عکس پروژه", Title = "عکس پروژه"
+                    },
+                    new Image
+                    {
+                        Id = 37, Address = "team/01.jpg", Alt = "عکس اعضا", Title = "عکس اعضا"
+                    },
+                    new Image
+                    {
+                        Id = 38, Address = "team/02.jpg", Alt = "عکس اعضا", Title = "عکس اعضا"
+                    },
+                    new Image
+                    {
+                        Id = 39, Address = "team/03.jpg", Alt = "عکس اعضا", Title = "عکس اعضا"
+                    },
+                    new Image
+                    {
+                        Id = 40, Address = "team/04.jpg", Alt = "عکس اعضا", Title = "عکس اعضا"
+                    },
+                    new Image
+                    {
+                        Id = 41, Address = "team/05.jpg", Alt = "عکس اعضا", Title = "عکس اعضا"
+                    },
+                    new Image
+                    {
+                        Id = 42, Address = "team/06.jpg", Alt = "عکس اعضا", Title = "عکس اعضا"
+                    },
+                    new Image
+                    {
+                        Id = 43, Address = "team/07.jpg", Alt = "عکس اعضا", Title = "عکس اعضا"
+                    },
+                    new Image
+                    {
+                        Id = 44, Address = "team/08.jpg", Alt = "عکس اعضا", Title = "عکس اعضا"
+                    },
+                    new Image
+                    {
+                        Id = 45, Address = "team/09.jpg", Alt = "عکس اعضا", Title = "عکس اعضا"
+                    },
+                    new Image
+                    {
+                        Id = 46, Address = "team/10.jpg", Alt = "عکس اعضا", Title = "عکس اعضا"
+                    },
+                    new Image
+                    {
+                        Id = 47, Address = "team/11.jpg", Alt = "عکس اعضا", Title = "عکس اعضا"
+                    },
+                    new Image
+                    {
+                        Id = 48, Address = "team/12.jpg", Alt = "عکس اعضا", Title = "عکس اعضا"
+                    },
+                    new Image
+                    {
+                        Id = 49, Address = "team/13.jpg", Alt = "عکس اعضا", Title = "عکس اعضا"
                     }
                 );
         }

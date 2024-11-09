@@ -4,6 +4,7 @@ using InfoTech.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoTech.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241109150105_CreateTeamMembersTableInDatabase")]
+    partial class CreateTeamMembersTableInDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -546,97 +549,6 @@ namespace InfoTech.DataAccess.Migrations
                             Address = "project/15.jpg",
                             Alt = "عکس پروژه",
                             Title = "عکس پروژه"
-                        },
-                        new
-                        {
-                            Id = 37,
-                            Address = "team/01.jpg",
-                            Alt = "عکس اعضا",
-                            Title = "عکس اعضا"
-                        },
-                        new
-                        {
-                            Id = 38,
-                            Address = "team/02.jpg",
-                            Alt = "عکس اعضا",
-                            Title = "عکس اعضا"
-                        },
-                        new
-                        {
-                            Id = 39,
-                            Address = "team/03.jpg",
-                            Alt = "عکس اعضا",
-                            Title = "عکس اعضا"
-                        },
-                        new
-                        {
-                            Id = 40,
-                            Address = "team/04.jpg",
-                            Alt = "عکس اعضا",
-                            Title = "عکس اعضا"
-                        },
-                        new
-                        {
-                            Id = 41,
-                            Address = "team/05.jpg",
-                            Alt = "عکس اعضا",
-                            Title = "عکس اعضا"
-                        },
-                        new
-                        {
-                            Id = 42,
-                            Address = "team/06.jpg",
-                            Alt = "عکس اعضا",
-                            Title = "عکس اعضا"
-                        },
-                        new
-                        {
-                            Id = 43,
-                            Address = "team/07.jpg",
-                            Alt = "عکس اعضا",
-                            Title = "عکس اعضا"
-                        },
-                        new
-                        {
-                            Id = 44,
-                            Address = "team/08.jpg",
-                            Alt = "عکس اعضا",
-                            Title = "عکس اعضا"
-                        },
-                        new
-                        {
-                            Id = 45,
-                            Address = "team/09.jpg",
-                            Alt = "عکس اعضا",
-                            Title = "عکس اعضا"
-                        },
-                        new
-                        {
-                            Id = 46,
-                            Address = "team/10.jpg",
-                            Alt = "عکس اعضا",
-                            Title = "عکس اعضا"
-                        },
-                        new
-                        {
-                            Id = 47,
-                            Address = "team/11.jpg",
-                            Alt = "عکس اعضا",
-                            Title = "عکس اعضا"
-                        },
-                        new
-                        {
-                            Id = 48,
-                            Address = "team/12.jpg",
-                            Alt = "عکس اعضا",
-                            Title = "عکس اعضا"
-                        },
-                        new
-                        {
-                            Id = 49,
-                            Address = "team/13.jpg",
-                            Alt = "عکس اعضا",
-                            Title = "عکس اعضا"
                         });
                 });
 
@@ -1173,13 +1085,6 @@ namespace InfoTech.DataAccess.Migrations
                             IndexSections = 6,
                             Tag = "پروژه ها",
                             Title = "پروژه های انجام شده در این شرکت"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            IndexSections = 8,
-                            Tag = "اعضا",
-                            Title = "اعضای تیم ما"
                         });
                 });
 
@@ -1406,125 +1311,6 @@ namespace InfoTech.DataAccess.Migrations
                         .IsUnique();
 
                     b.ToTable("TeamMembers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Content = "",
-                            Description = "",
-                            Family = "مسعوداردکانی",
-                            ImageId = 37,
-                            Name = "عباس"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Content = "",
-                            Description = "",
-                            Family = "مسعوداردکانی",
-                            ImageId = 38,
-                            Name = "عباس"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Content = "",
-                            Description = "",
-                            Family = "مسعوداردکانی",
-                            ImageId = 39,
-                            Name = "عباس"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Content = "",
-                            Description = "",
-                            Family = "مسعوداردکانی",
-                            ImageId = 40,
-                            Name = "عباس"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Content = "",
-                            Description = "",
-                            Family = "مسعوداردکانی",
-                            ImageId = 41,
-                            Name = "عباس"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Content = "",
-                            Description = "",
-                            Family = "مسعوداردکانی",
-                            ImageId = 42,
-                            Name = "عباس"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Content = "",
-                            Description = "",
-                            Family = "مسعوداردکانی",
-                            ImageId = 43,
-                            Name = "عباس"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Content = "",
-                            Description = "",
-                            Family = "مسعوداردکانی",
-                            ImageId = 44,
-                            Name = "عباس"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Content = "",
-                            Description = "",
-                            Family = "مسعوداردکانی",
-                            ImageId = 45,
-                            Name = "عباس"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Content = "",
-                            Description = "",
-                            Family = "مسعوداردکانی",
-                            ImageId = 46,
-                            Name = "عباس"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Content = "",
-                            Description = "",
-                            Family = "مسعوداردکانی",
-                            ImageId = 47,
-                            Name = "عباس"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Content = "",
-                            Description = "",
-                            Family = "مسعوداردکانی",
-                            ImageId = 48,
-                            Name = "عباس"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Content = "",
-                            Description = "",
-                            Family = "مسعوداردکانی",
-                            ImageId = 49,
-                            Name = "عباس"
-                        });
                 });
 
             modelBuilder.Entity("InfoTech.Models.Video", b =>
