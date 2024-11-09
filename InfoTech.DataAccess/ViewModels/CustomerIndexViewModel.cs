@@ -13,6 +13,7 @@ namespace InfoTech.DataAccess.ViewModels
         public ServiceSectionViewModel ServiceSectionViewModel { get; set; }
         public WorkProcessViewModel? WorkProcessViewModel { get; set; }
         public ProjectSectionViewModel? ProjectSectionViewModel { get; set; }
+        public List<Marque> Marques { get; set; }
         public CustomerIndexViewModel(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
             HeroBanners = unitOfWork.HeroBanners.GetAllLazyLoad(h => h.Image!).ToList();
@@ -50,6 +51,7 @@ namespace InfoTech.DataAccess.ViewModels
                 Section = unitOfWork.Sections.Get(s => s.IndexSections == Sd.IndexSections.Project),
                 Video = unitOfWork.Videos.GetById(2)
             };
+            Marques = unitOfWork.Marques.GetAll().ToList();
         }
     }
 }

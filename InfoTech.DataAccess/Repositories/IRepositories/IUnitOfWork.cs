@@ -19,6 +19,7 @@
         IServiceRepo Services { get; }
         IWorkProcessRepo WorkProcess { get; }
         IProjectRepo Projects { get; }
+        IMarqueRepo Marques { get; }
         void Save();
     }
 }

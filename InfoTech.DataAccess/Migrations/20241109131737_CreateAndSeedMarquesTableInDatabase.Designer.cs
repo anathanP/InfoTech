@@ -4,6 +4,7 @@ using InfoTech.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfoTech.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241109131737_CreateAndSeedMarquesTableInDatabase")]
+    partial class CreateAndSeedMarquesTableInDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -640,48 +643,6 @@ namespace InfoTech.DataAccess.Migrations
                         new
                         {
                             Id = 4,
-                            Name = "امنیت سایبری",
-                            Title = "امنیت سایبری"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "امنیت سایبری",
-                            Title = "امنیت سایبری"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Name = "امنیت سایبری",
-                            Title = "امنیت سایبری"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Name = "امنیت سایبری",
-                            Title = "امنیت سایبری"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Name = "امنیت سایبری",
-                            Title = "امنیت سایبری"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Name = "امنیت سایبری",
-                            Title = "امنیت سایبری"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Name = "امنیت سایبری",
-                            Title = "امنیت سایبری"
-                        },
-                        new
-                        {
-                            Id = 12,
                             Name = "امنیت سایبری",
                             Title = "امنیت سایبری"
                         },

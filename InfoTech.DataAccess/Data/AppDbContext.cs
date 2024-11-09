@@ -29,6 +29,7 @@ namespace InfoTech.DataAccess.Data
         public DbSet<Service> Services { get; set; }
         public DbSet<WorkProcess> WorkProcesses { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public DbSet<Marque> Marques { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -48,6 +49,7 @@ namespace InfoTech.DataAccess.Data
             modelBuilder.ApplyConfiguration(new ServiceConfiguration());
             modelBuilder.ApplyConfiguration(new WorkProcessConfiguration());
             modelBuilder.ApplyConfiguration(new ProjectConfiguration());
+            modelBuilder.ApplyConfiguration(new MarqueConfiguration());
         }
     }
 }
